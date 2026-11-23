@@ -131,6 +131,7 @@ git push
 - finalize 失败时先按错误提示修内容（占位符未填、小节过短、索引不一致），修完重跑即可。
 - 摘要/抓取质量问题不要靠反复重跑来「碰运气」：记录问题，必要时在提交说明里说明。
 - 网络失败（arXiv 超时、推送失败）等几分钟再试，不要连续重试。
+- 推送持续失败（连接 github.com 被重置）：先 `python scripts/publish_api.py --dry-run` 检查将发布哪些文件，再 `python scripts/publish_api.py --message "digest: YYYY-MM-DD"` 走 GitHub API 兜底发布；`finalize --git` 也会在多次重试失败后自动调用它。
 
 ## 完成标准
 

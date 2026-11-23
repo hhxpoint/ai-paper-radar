@@ -1318,17 +1318,28 @@ def git_commit_push(message: str, dry_run: bool = False) -> bool:
         log(f"WARN: git commit 失败：{commit.stderr.strip()[:500]}")
         return False
     log(f"已提交：{message}")
-    for attempt in range(3):
+    delays = [0, 10, 20, 30, 40]
+    for attempt, delay in enumerate(delays, 1):
+        if delay:
+            time.sleep(delay)
         push = run("git", "push", "origin", "HEAD:main")
         if push.returncode == 0:
             log("已推送到 origin/main")
             return True
-        log(f"WARN: push 失败（第 {attempt + 1} 次）：{push.stderr.strip()[:300]}")
+        log(f"WARN: push 失败（第 {attempt}/{len(delays)} 次）：{push.stderr.strip()[:300]}")
         pull = run("git", "pull", "--rebase", "origin", "main")
         if pull.returncode != 0:
-            log(f"WARN: pull --rebase 失败：{pull.stderr.strip()[:500]}")
-            break
-        time.sleep(2 * (attempt + 1))
+            log(f"WARN: pull --rebase 失败（继续重试 push）：{pull.stderr.strip()[:300]}")
+    # 网络到 github.com 被阻断时，退回 GitHub REST API 发布（api.github.com 通常仍可用）
+    log("WARN: git push 连续失败，尝试 GitHub API 兜底发布")
+    publish = subprocess.run(
+        [sys.executable, str(ROOT / "scripts" / "publish_api.py"), "--json", "--message", message],
+        cwd=ROOT, capture_output=True, text=True, encoding="utf-8",
+    )
+    if publish.returncode == 0:
+        log("已通过 GitHub API 发布成功")
+        return True
+    log(f"ERROR: API 兜底发布也失败：{(publish.stderr or publish.stdout).strip()[:500]}")
     return False
 
 

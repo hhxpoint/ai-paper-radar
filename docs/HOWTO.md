@@ -40,6 +40,7 @@ Actions 也支持「只抓取、不摘要」：`workflow_dispatch` 勾选 `skip_
 - `finalize` 也是幂等的：已 `final`/`empty` 的日期直接返回。它在发布前总会校验占位符和小节完整度，校验不过不会改状态。
 - `--summary-mode` 只记录本期摘要的来源（`auto` / `llm` / `fallback` / `manual`），用于状态行和索引展示，不改变摘要内容。Actions 按 `summarize.py` 的实际结果记为 `llm` 或 `fallback`；本地精读建议记为 `manual`。
 - `--git` 让 `finalize` 完成后自动 `commit & push`（提交信息为「每日论文雷达：日期」）；配合 `--dry-run` 可只演练不提交。
+- **推送兜底**：`--git` 推送失败时会自动重试 5 次（间隔 10~40 秒），仍失败则调用 `python scripts/publish_api.py --message "提交信息"` 通过 GitHub REST API 发布（需要 `gh` 已登录或设置 `GITHUB_TOKEN`；单次限制 300 个文件 / 50MB；先用 `--dry-run` 可查看将发布哪些文件）。手动发布或 `git push` 长期不通时也可直接用它。
 
 ### 回滚某一天
 
