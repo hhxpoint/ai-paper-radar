@@ -1,0 +1,1 @@
+# 占位文件，保持 data/daily 目录存在；每日状态在 prepare 后写入。

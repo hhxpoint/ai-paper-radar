@@ -1,0 +1,286 @@
+{
+ "date": "2026-11-23",
+ "status": "final",
+ "created_at": "2026-11-23T16:51:58+08:00",
+ "updated_at": "2026-11-23T17:03:38+08:00",
+ "window": {
+  "start": "2026-11-19",
+  "end": "2026-11-23"
+ },
+ "fetch": {
+  "window": {
+   "start": "2026-11-19",
+   "end": "2026-11-23"
+  },
+  "arxiv": {
+   "requests": 4,
+   "entries": 1178,
+   "errors": []
+  },
+  "hf": {
+   "entries": 100,
+   "errors": []
+  },
+  "offline": true
+ },
+ "counts": {
+  "candidates": 1215,
+  "excluded_seen": 0,
+  "excluded_negative": 38,
+  "excluded_short": 0,
+  "pool": 1177
+ },
+ "topic_distribution": {
+  "大模型与推理": 443,
+  "多模态与视觉": 274,
+  "理论、评测与数据": 199,
+  "效率、系统与安全": 117,
+  "强化学习与智能体": 68,
+  "其他": 41,
+  "语音与音频": 35
+ },
+ "selected": [
+  {
+   "id": "2611.27148",
+   "title": "Structure Over Scale: Rethinking Adaptation for Reinforcement Learning with Verifiable Rewards",
+   "topic": "强化学习与智能体",
+   "venue": "TMLR 2026",
+   "score": 14.85,
+   "published": "2026-11-20",
+   "authors": [
+    "Allan Kazakov",
+    "Abdurrahman Javat"
+   ],
+   "abs_url": "https://arxiv.org/abs/2611.27148",
+   "pdf_url": "https://arxiv.org/pdf/2611.27148",
+   "html_url": "https://arxiv.org/html/2611.27148",
+   "code_url": "https://github.com/Shrimpstanot/structure-over-scale",
+   "hf_url": "",
+   "comment": "Published in TMLR (10/2026)",
+   "abstract": "Reinforcement Learning with Verifiable Rewards (RLVR) is often framed as a choice between the expressivity of Full Fine-Tuning (FFT) and the efficiency of Low-Rank Adaptation (LoRA). We find that this framing misses an important variable: the geometry of the update. Under a common cold-start GRPO protocol, LoRA exhibits rank collapse: performance remains broadly stable at low rank, then fails abruptly as rank increases. On DeepMath-Hard, for example, accuracy drops from 73.1% at r=64 to 4.7% at r=128. In contrast, Weight-Decomposed Low-Rank Adaptation (DoRA) and Quantum-Informed Tensor Adaptation (QuanTA) remain stable over a wider tested optimization region and are competitive with FFT while updating less than 0.6% of the model parameters. Spectral analysis reveals a corresponding difference in learned update structure: collapsed LoRA concentrates its update energy into relatively few effective directions, whereas structured adapters produce substantially more distributed updates. These results suggest that nominal rank and parameter count alone are insufficient to characterize adaptation in RLVR - the structure imposed on the reachable update manifold also matters. Finally, across three 8B base models, adapter behavior aligns with both frozen-weight spectral structure and reported pre-training scale, motivating the Model Maturity Hypothesis: the adaptation geometry that works best may depend on properties already encoded during pre-training. We present this as a falsifiable hypothesis rather than a causal conclusion. The code can be found here https://github.com/Shrimpstanot/structure-over-scale",
+   "signals": {
+    "venue": 4.0,
+    "topic": 1.25,
+    "opinion": 8.4,
+    "hf": 0.0,
+    "freshness": 0.5,
+    "code": 0.4,
+    "abstract": 0.3
+   },
+   "note_path": "papers/2026-11/2611.27148-structure-over-scale-rethinking-adaptation-for.md"
+  },
+  {
+   "id": "2611.25898",
+   "title": "Verifiable Logic in Medical LLMs: A Critical Review of Agentic Clinical Reasoning Optimization and Neuro-Symbolic Grounding",
+   "topic": "大模型与推理",
+   "venue": "",
+   "score": 11.35,
+   "published": "2026-11-19",
+   "authors": [
+    "Youssef ElNahas",
+    "Adel Ammar",
+    "Soumaya Chaffar",
+    "Wadii Boulila"
+   ],
+   "abs_url": "https://arxiv.org/abs/2611.25898",
+   "pdf_url": "https://arxiv.org/pdf/2611.25898",
+   "html_url": "https://arxiv.org/html/2611.25898",
+   "code_url": "",
+   "hf_url": "",
+   "comment": "",
+   "abstract": "Clinical large language models are usually judged by whether the final answer is right. Yet a model can reach a fluent, plausible output through invalid reasoning that static benchmarks do not detect, and confident hallucination, causally invalid inference, and spurious demographic shortcuts can pass conventional evaluation. This critical review covers four paradigms in turn: how clinical hallucination arises and why static metrics miss it; the agentic hallucination cascade, in which multi-agent and tool-augmented systems propagate and amplify early reasoning errors; process reward modeling as step-level supervision; and neuro-symbolic grounding, in which formal logic engines, ontology reasoners, and knowledge graphs place verifiable constraints on neural output. Within their encoded domains, systems with symbolic veto layers offer guarantees that hold relative to their encoded knowledge, and they report large gains on the safety measures they use. These results come from single studies, mostly in simulated or small-sample settings, and are not directly comparable with neural baselines. Process reward models remain bounded by the statistics of their training data. We propose a conceptual framework that maps each agentic failure mode to a symbolic intervention point, and we argue that clinical AI safety depends substantially on system architecture. Because current regulation emphasizes performance and does not require verification of reasoning steps, we argue that responsible certification should also audit reasoning trajectories alongside accuracy on static benchmarks.",
+   "signals": {
+    "venue": 0.0,
+    "topic": 2.0,
+    "opinion": 8.55,
+    "hf": 0.0,
+    "freshness": 0.5,
+    "code": 0.0,
+    "abstract": 0.3
+   },
+   "note_path": "papers/2026-11/2611.25898-verifiable-logic-in-medical-llms-a-critical.md"
+  },
+  {
+   "id": "2611.25873",
+   "title": "WHU-Road3D: A dataset and benchmark towards fine-grained road surface mapping",
+   "topic": "理论、评测与数据",
+   "venue": "",
+   "score": 11.0,
+   "published": "2026-11-19",
+   "authors": [
+    "Xiaoxin Mi",
+    "Zhen Cao",
+    "Chong Liu",
+    "Yuhao Li",
+    "Zhen Dong",
+    "Bisheng Yang",
+    "Yang Jia",
+    "Shengwu Xiong"
+   ],
+   "abs_url": "https://arxiv.org/abs/2611.25873",
+   "pdf_url": "https://arxiv.org/pdf/2611.25873",
+   "html_url": "https://arxiv.org/html/2611.25873",
+   "code_url": "https://github.com/WHU-USI3DV/WHU-Road3D.git",
+   "hf_url": "",
+   "comment": "16 pages",
+   "abstract": "Accurately extracting and mapping road surface elements is crucial for applications such as high-definition maps, road asset management, and intelligent transportation systems. This study first provides a comprehensive review of the benchmark datasets for extracting and mapping road elements, encompassing overhead-to-perspective data, large-to-local scales, and coarse-to-fine details. Subsequently, we thoroughly review the relevant approaches for extracting road surface elements. However, we argue that existing datasets still require enhancements in semantic richness, data modality diversity, and scenario complexity. To bridge these gaps, this paper presents WHU-Road3D, a large-scale multimodal dataset for fine-grained road surface mapping to address these shortcomings. WHU-Road3D provides approximately 100 km of diverse Chinese highways and urban streets. It features a rich combination of MLS point clouds, associated panoramic images, vehicle trajectories, detailed vectorized annotations, and pointwise instance annotations for road surface elements. The dataset carefully annotates 15 distinct categories of road elements, including common markings like road boundaries, zebra crossings, lane dividers, stop lines, as well as 10 types of direction symbols. To our knowledge, WHU-Road3D stands as the first multimodal dataset for mapping such a comprehensive range of road surface elements, designed to facilitate cutting-edge research in instance segmentation, full-element extraction and mapping on road surfaces. Beyond these immediate applications, WHU-Road3D also provides a valuable source for hierarchical road topology reasoning, map updating, and street scene generation. The dataset, along with the code for our benchmark methods, will be made publicly available at \\href{https://github.com/WHU-USI3DV/WHU-Road3D.git}{https://github.com/WHU-USI3DV/WHU-Road3D.git}.",
+   "signals": {
+    "venue": 0.0,
+    "topic": 1.25,
+    "opinion": 8.55,
+    "hf": 0.0,
+    "freshness": 0.5,
+    "code": 0.4,
+    "abstract": 0.3
+   },
+   "note_path": "papers/2026-11/2611.25873-whu-road3d-a-dataset-and-benchmark-towards-fine.md"
+  },
+  {
+   "id": "2611.20455",
+   "title": "Embeddings vs. Grep: Rethinking the Dense Advantage in Code Search",
+   "topic": "大模型与推理",
+   "venue": "",
+   "score": 10.558,
+   "published": "2026-11-16",
+   "authors": [
+    "Siqiao Xue",
+    "Ziyin Zhang",
+    "Zihan Liao",
+    "Jin Qin",
+    "Yixiang Mu",
+    "Hang Yu"
+   ],
+   "abs_url": "https://arxiv.org/abs/2611.20455",
+   "pdf_url": "https://arxiv.org/pdf/2611.20455",
+   "html_url": "https://arxiv.org/html/2611.20455",
+   "code_url": "",
+   "hf_url": "https://huggingface.co/papers/2611.20455",
+   "comment": "",
+   "abstract": "Code-search benchmarks show dense encoders well ahead of BM25, yet coding agents do well with grep. What does this dense advantage measure? Existing benchmarks cannot tell: they use curated queries, old code and a handicapped BM25. To find out, we build Repo-Premium, a realistic repository-level code-search benchmark. It ranks files in real repositories, with curated and raw queries in Python, JavaScript, TypeScript, Go, Rust and Java, pull requests from 2022 to 2026, and a preregistered test pool over 91 repositories. Our experiments trace the advantage to two sources: evaluation choices that favor dense retrieval, such as splitting files into chunks for BM25 and counting edited tests as relevant, and queries that lack the code's rare identifiers. Expanding the query with LLM-written identifiers (generate-then-grep) helps BM25 far more than dense retrieval, letting it match dense retrieval in every Python pool, even on pull requests opened after the LLM was released. No method we tried predicts which retriever will win on a given query. From these results we derive three guidelines: measure dense gains against a fair lexical baseline, fuse dense retrieval with BM25, and add the code's words to queries that lack them.",
+   "signals": {
+    "venue": 0.0,
+    "topic": 0.75,
+    "opinion": 6.7,
+    "hf": 2.308,
+    "freshness": 0.5,
+    "code": 0.0,
+    "abstract": 0.3
+   },
+   "note_path": "papers/2026-11/2611.20455-embeddings-vs-grep-rethinking-the-dense.md"
+  },
+  {
+   "id": "2611.27214",
+   "title": "EAF-TTS: Rethinking Codec-Latent Coordinates for Flow TTS",
+   "topic": "语音与音频",
+   "venue": "",
+   "score": 9.5,
+   "published": "2026-11-20",
+   "authors": [
+    "Yumiao Li",
+    "Haoxiang Jie",
+    "Xinbei Li",
+    "Yaoyuan Yan",
+    "Yue Qu"
+   ],
+   "abs_url": "https://arxiv.org/abs/2611.27214",
+   "pdf_url": "https://arxiv.org/pdf/2611.27214",
+   "html_url": "https://arxiv.org/html/2611.27214",
+   "code_url": "",
+   "hf_url": "",
+   "comment": "",
+   "abstract": "Latent text-to-speech (TTS) systems generate codec latents decoded by a frozen decoder, but good reconstruction does not ensure geometry suitable for Flow generation from isotropic Gaussian noise. We present Embedded Acoustic Flow TTS (EAF-TTS), an acoustic-latent adaptation of ELF with phone- and duration-conditioned generation, shared-network terminal correction, and frozen WaveVAE decoding. EAF-TTS supports a fixed ZCA interface estimated from training data and adding no learned parameters. The codec, conditioning modules, Flow backbone, and 20-call inference are shared. The intervention is the full ZCA coordinate protocol---training and sampling coordinates, induced loss metric, and terminal perturbation---not an inference-only transform. In single-speaker LJSpeech, the 64-D training-latent covariance has condition number 1355.44. On text-disjoint Val399 strict-GT with fixed E100 raw checkpoints across three matched seeds, ZCA improves UTMOS22 Strong---an automatic naturalness proxy, not human MOS---by $+0.405\\pm0.027$ over Scalar normalization (mean $\\pm$ seed SD of per-seed paired differences). Absolute scores remain below codec-reference levels. Without retraining, ZCA-5 retains $+0.375\\pm0.027$ UTMOS over Scalar-20 while reducing generation-path RTF by $3.34\\times$. This three-seed analysis shows no statistically detectable WER or exact-match degradation, but does not establish equivalence. ZCA-3 gives $5.03\\times$ with a $+0.165$ UTMOS advantage. At matched reduced call counts, ZCA's advantage shrinks, indicating full-step headroom rather than better low-step integration. A secondary text-only selected-checkpoint result is directionally consistent but confounded by checkpoint type. We claim only proxy-naturalness and measured quality--latency effects within this protocol; human listening, blind text, and broader validation remain necessary.",
+   "signals": {
+    "venue": 0.0,
+    "topic": 2.0,
+    "opinion": 6.7,
+    "hf": 0.0,
+    "freshness": 0.5,
+    "code": 0.0,
+    "abstract": 0.3
+   },
+   "note_path": "papers/2026-11/2611.27214-eaf-tts-rethinking-codec-latent-coordinates-for.md"
+  }
+ ],
+ "backups": [
+  {
+   "id": "2611.26336",
+   "title": "One Framework to Diagnose Them All: A Stratified Benchmark for Bengali LLM Hallucination",
+   "topic": "理论、评测与数据",
+   "venue": "",
+   "score": 10.5,
+   "abs_url": "https://arxiv.org/abs/2611.26336"
+  },
+  {
+   "id": "2611.25991",
+   "title": "From AI Surrogate to Engineering Tool: Toward Production Use of Fiber-Orientation Prediction in Crash CAE",
+   "topic": "效率、系统与安全",
+   "venue": "AAAI 2027",
+   "score": 10.0,
+   "abs_url": "https://arxiv.org/abs/2611.25991"
+  },
+  {
+   "id": "2611.24059",
+   "title": "Replay, Don't Resample: Off-Policy Consolidation of Long-Horizon RL Experts",
+   "topic": "强化学习与智能体",
+   "venue": "",
+   "score": 9.813,
+   "abs_url": "https://arxiv.org/abs/2611.24059"
+  },
+  {
+   "id": "2611.16933",
+   "title": "Kezek: Splitting Mono Two-Person Conversations into Per-Speaker Tracks for Full-Duplex Dialogue Data",
+   "topic": "语音与音频",
+   "venue": "",
+   "score": 9.278,
+   "abs_url": "https://arxiv.org/abs/2611.16933"
+  },
+  {
+   "id": "2611.25407",
+   "title": "ChronoDossier: Long-Form Personas as Temporal Memory Representations",
+   "topic": "大模型与推理",
+   "venue": "ICLR 2027",
+   "score": 9.2,
+   "abs_url": "https://arxiv.org/abs/2611.25407"
+  },
+  {
+   "id": "2611.27260",
+   "title": "No Perfect Guardrail & No Perfect Guard: On the Decidability of Output Policies for Large Language Models",
+   "topic": "大模型与推理",
+   "venue": "",
+   "score": 9.2,
+   "abs_url": "https://arxiv.org/abs/2611.27260"
+  },
+  {
+   "id": "2611.27050",
+   "title": "Towards Text-Mask Consistency in Medical Image Segmentation",
+   "topic": "多模态与视觉",
+   "venue": "ICLR 2026",
+   "score": 9.1,
+   "abs_url": "https://arxiv.org/abs/2611.27050"
+  },
+  {
+   "id": "2611.26900",
+   "title": "Modeling Attributional Style at Scale: A Dataset and Analysis for Psychological Attribution Assessment and Reframing",
+   "topic": "理论、评测与数据",
+   "venue": "ICML 2026",
+   "score": 9.05,
+   "abs_url": "https://arxiv.org/abs/2611.26900"
+  }
+ ],
+ "digest_path": "digests/2026-11-23.md",
+ "summary_mode": "manual",
+ "finalized_at": "2026-11-23T17:03:38+08:00",
+ "llm": {
+  "model": "openai/gpt-4.1-mini",
+  "fallback_model": "openai/gpt-4o-mini",
+  "ok": 0,
+  "failed": [
+   "2611.27148",
+   "2611.25898",
+   "2611.25873",
+   "2611.20455",
+   "2611.27214"
+  ],
+  "at": "2026-11-23T16:54:25+08:00"
+ }
+}

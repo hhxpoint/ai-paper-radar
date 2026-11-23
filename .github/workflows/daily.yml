@@ -1,0 +1,112 @@
+name: daily-paper-radar
+
+on:
+  schedule:
+    # 每天 23:10 UTC = 次日 07:10 (UTC+8)。云端抓取 arXiv 候选并生成中文速读摘要。
+    - cron: "10 23 * * *"
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "目标日期 YYYY-MM-DD（留空=今天，UTC+8）"
+        required: false
+        default: ""
+      count:
+        description: "精选篇数（留空=5）"
+        required: false
+        default: ""
+      skip_summarize:
+        description: "只抓取候选、不生成摘要（生成待精读草稿）"
+        type: boolean
+        required: false
+        default: false
+
+concurrency:
+  group: daily-paper-radar
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  models: read
+
+jobs:
+  radar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      TZ: Asia/Shanghai
+      PYTHONUNBUFFERED: "1"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install "pyyaml==6.0.2"
+
+      - name: Prepare candidates
+        env:
+          TARGET_DATE: ${{ github.event.inputs.date }}
+          PAPER_COUNT: ${{ github.event.inputs.count }}
+        run: |
+          set -euo pipefail
+          ARGS=(--json)
+          if [ -n "${TARGET_DATE:-}" ]; then ARGS+=(--date "${TARGET_DATE}"); fi
+          if [ -n "${PAPER_COUNT:-}" ]; then ARGS+=(--count "${PAPER_COUNT}"); fi
+          python scripts/paper_radar.py prepare "${ARGS[@]}" | tee /tmp/prepare.json
+
+      - name: Summarize with GitHub Models
+        if: github.event.inputs.skip_summarize != 'true'
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          TARGET_DATE: ${{ github.event.inputs.date }}
+        run: |
+          set -euo pipefail
+          ARGS=(--json)
+          if [ -n "${TARGET_DATE:-}" ]; then ARGS+=(--date "${TARGET_DATE}"); fi
+          python scripts/summarize.py "${ARGS[@]}" | tee /tmp/summarize.json
+
+      - name: Finalize
+        if: github.event.inputs.skip_summarize != 'true'
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          TARGET_DATE: ${{ github.event.inputs.date }}
+        run: |
+          set -euo pipefail
+          ARGS=(--strict --json)
+          if [ -n "${TARGET_DATE:-}" ]; then ARGS+=(--date "${TARGET_DATE}"); fi
+          python scripts/paper_radar.py finalize "${ARGS[@]}" | tee /tmp/finalize.json
+
+      - name: Verify repository integrity
+        if: github.event.inputs.skip_summarize != 'true'
+        run: python scripts/paper_radar.py check
+
+      - name: Commit and push
+        env:
+          TARGET_DATE: ${{ github.event.inputs.date }}
+          SKIP_SUMMARIZE: ${{ github.event.inputs.skip_summarize }}
+        run: |
+          set -euo pipefail
+          git config user.name "hhxpoint"
+          git config user.email "hhxpoint@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "没有变更，跳过提交"
+            exit 0
+          fi
+          DATE_LABEL="${TARGET_DATE:-$(TZ=Asia/Shanghai date +%F)}"
+          if [ "${SKIP_SUMMARIZE:-}" = "true" ]; then
+            git commit -m "论文雷达草稿：${DATE_LABEL}（待精读）"
+          else
+            git commit -m "每日论文雷达：${DATE_LABEL}"
+          fi
+          for i in 1 2 3; do
+            if git push origin HEAD:main; then exit 0; fi
+            git pull --rebase origin main
+            sleep $((i * 3))
+          done
+          echo "push 失败" >&2
+          exit 1

@@ -1,0 +1,34 @@
+# ============================================================
+# 论文雷达 · 数据源与网络参数
+# 只使用公开、无需鉴权的数据源；任一源失败都不影响整体流程。
+# ============================================================
+
+arxiv:
+  enabled: true
+  api: "https://export.arxiv.org/api/query"
+  page_size: 500          # 单次请求条数
+  max_pages: 3            # 主候选池最多翻几页（约 1500 条上限）
+  request_delay_seconds: 3.2   # arXiv API 礼仪：请求间隔
+  timeout_seconds: 90
+  retries: 4
+  user_agent: "paper-radar/1.0 (https://github.com/hhxpoint/ai-paper-radar)"
+
+hf_daily:
+  enabled: true
+  # 依次尝试；镜像优先（部分网络环境直连 huggingface.co 不通）
+  apis:
+    - "https://hf-mirror.com/api/daily_papers"
+    - "https://huggingface.co/api/daily_papers"
+  limit: 100
+  timeout_seconds: 30
+  retries: 2
+
+network:
+  retry_backoff_seconds: 4
+  retry_backoff_max: 60
+  user_agent: "paper-radar/1.0 (https://github.com/hhxpoint/ai-paper-radar)"
+
+# LLM 摘要（GitHub Actions 中由 GITHUB_TOKEN 调用 GitHub Models）
+llm:
+  endpoint: "https://models.github.ai/inference/chat/completions"
+  request_timeout_seconds: 120

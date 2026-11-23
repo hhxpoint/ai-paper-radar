@@ -1,0 +1,53 @@
+{
+ "version": 1,
+ "ids": {
+  "2611.27148": {
+   "date": "2026-11-23",
+   "title": "Structure Over Scale: Rethinking Adaptation for Reinforcement Learning with Verifiable Rewards",
+   "topics": [
+    "强化学习与智能体"
+   ],
+   "venue": "TMLR 2026"
+  },
+  "2611.25898": {
+   "date": "2026-11-23",
+   "title": "Verifiable Logic in Medical LLMs: A Critical Review of Agentic Clinical Reasoning Optimization and Neuro-Symbolic Grounding",
+   "topics": [
+    "大模型与推理"
+   ],
+   "venue": ""
+  },
+  "2611.25873": {
+   "date": "2026-11-23",
+   "title": "WHU-Road3D: A dataset and benchmark towards fine-grained road surface mapping",
+   "topics": [
+    "理论、评测与数据"
+   ],
+   "venue": ""
+  },
+  "2611.20455": {
+   "date": "2026-11-23",
+   "title": "Embeddings vs. Grep: Rethinking the Dense Advantage in Code Search",
+   "topics": [
+    "大模型与推理"
+   ],
+   "venue": ""
+  },
+  "2611.27214": {
+   "date": "2026-11-23",
+   "title": "EAF-TTS: Rethinking Codec-Latent Coordinates for Flow TTS",
+   "topics": [
+    "语音与音频"
+   ],
+   "venue": ""
+  }
+ },
+ "titles": {
+  "structure over scale rethinking adaptation for reinforcement learning with verifiable rewards": "2611.27148",
+  "verifiable logic in medical llms a critical review of agentic clinical reasoning optimization and neuro symbolic grounding": "2611.25898",
+  "whu road3d a dataset and benchmark towards fine grained road surface mapping": "2611.25873",
+  "embeddings vs grep rethinking the dense advantage in code search": "2611.20455",
+  "eaf tts rethinking codec latent coordinates for flow tts": "2611.27214"
+ },
+ "updated_at": "2026-11-23T17:03:38+08:00"
+}

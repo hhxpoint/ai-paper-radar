@@ -1,0 +1,284 @@
+# ============================================================
+# 论文雷达 · 选文画像
+# 修改后 git commit 即生效（GitHub Actions 与本地智能体共用）。
+# 字段说明见 docs/SELECTION.md。
+# ============================================================
+
+profile:
+  name: "hhxpoint 的 AI 论文雷达"
+  language: zh
+  daily_count: 5               # 每天精读篇数
+  max_per_topic: 2             # 同一主题每天最多入选几篇（多样性约束）
+  lookback_days: 4             # 主候选池抓取窗口（天，含当天）
+  opinion_lookback_days: 21    # 「有观点」专项检索窗口（天）
+  max_digest_backups: 8        # 每日 digest 中「备选」条数
+  min_abstract_chars: 200      # 摘要过短的论文不参与评分
+  # 若候选池中存在这些主题的论文，保证至少入选几篇（没有则跳过）
+  required_topics:
+    语音与音频: 1
+
+# arXiv 大类（主候选池）
+categories:
+  - cs.AI
+  - cs.LG
+  - cs.CL
+  - cs.CV
+  - cs.RO
+  - cs.MA
+  - cs.NE
+  - eess.AS
+  - cs.SD
+
+# 主题画像：关键词命中 = 主题匹配 + 兴趣加分 + 多样性限流依据
+topics:
+  大模型与推理:
+    weight: 1.35
+    keywords:
+      - llm
+      - large language model
+      - language model
+      - foundation model
+      - reasoning
+      - chain-of-thought
+      - chain of thought
+      - test-time
+      - inference-time
+      - context length
+      - agent
+      - agents
+      - agentic
+      - tool use
+      - planning
+      - memory
+      - rag
+      - retrieval-augmented
+      - instruction following
+      - alignment
+      - scaling law
+  语音与音频:
+    weight: 1.6
+    keywords:
+      - speech
+      - audio
+      - asr
+      - automatic speech recognition
+      - tts
+      - text-to-speech
+      - voice
+      - spoken
+      - whisper
+      - codec
+      - vocoder
+      - speaker
+      - acoustic
+      - prosody
+      - emotion recognition
+      - music generation
+      - audio-language
+      - omni
+      - dysarthria
+  多模态与视觉:
+    weight: 1.2
+    keywords:
+      - multimodal
+      - multi-modal
+      - vision-language
+      - vlm
+      - video
+      - image
+      - video generation
+      - image generation
+      - diffusion
+      - segmentation
+      - detection
+      - 3d
+      - point cloud
+      - world model
+  强化学习与智能体:
+    weight: 1.3
+    keywords:
+      - reinforcement learning
+      - rl
+      - rlvr
+      - rlhf
+      - policy
+      - reward
+      - preference optimization
+      - offline rl
+      - multi-agent
+      - exploration
+  理论、评测与数据:
+    weight: 1.1
+    keywords:
+      - theory
+      - theoretical
+      - generalization
+      - optimization
+      - convergence
+      - benchmark
+      - evaluation
+      - dataset
+      - data quality
+      - annotation
+      - robustness
+      - interpretability
+      - probing
+      - scaling
+  效率、系统与安全:
+    weight: 1.0
+    keywords:
+      - efficient
+      - efficiency
+      - inference
+      - serving
+      - kv cache
+      - quantization
+      - distillation
+      - pruning
+      - latency
+      - throughput
+      - safety
+      - security
+      - jailbreak
+      - privacy
+      - watermark
+      - attack
+      - defense
+
+# 「有观点」信号：标题/摘要/comment 命中后加分
+opinion:
+  strong_weight: 2.5
+  medium_weight: 1.2
+  weak_weight: 0.5
+  strong_cap: 5.0
+  medium_cap: 2.4
+  weak_cap: 1.2
+  strong_keywords:
+    - "position paper"
+    - "this position"
+    - "we take the position"
+    - "we argue"
+    - "we posit"
+    - "we contend"
+    - "we challenge"
+    - "critique"
+    - "controversial"
+    - "myth"
+    - "illusion"
+    - "misconception"
+    - "negative result"
+    - "rethinking"
+    - "rethink"
+    - "re-examine"
+    - "reexamine"
+    - "provocative"
+  medium_keywords:
+    - perspective
+    - debate
+    - "we question"
+    - "call for"
+    - "is it"
+    - "does it"
+    - "what if"
+    - paradigm
+    - lesson
+    - pitfall
+    - "limitations of"
+    - fail
+    - failure
+    - broken
+    - overrated
+    - underrated
+    - "open problem"
+    - "unexpected"
+  weak_keywords:
+    - survey
+    - review
+    - tutorial
+    - benchmark
+    - taxonomy
+    - "empirical study"
+    - analysis
+    - insights
+    - "we find that"
+    - surprising
+  strong_regex:
+    - '\b(we|i) (argue|posit|contend|maintain|take the position) (that )?'
+    - '\b(is|are|was|were) (not|no longer) (enough|sufficient|necessary|the answer)\b'
+    - '\b(does|do) not (work|generalize|scale|hold)\b'
+    - '\b(we|authors) (find|show|demonstrate) that .{0,80}(fails?|breaks?|does not)'
+  medium_regex:
+    - '\b(why|when|how) (do|does|should) .{0,40}\?'
+    - '\b(beyond|rethinking|revisiting|reconsidering)\b'
+
+# 顶会/期刊信号：从 arXiv comment 与 journal_ref 中识别录用信息
+venue_signals:
+  - name: NeurIPS
+    pattern: '\b(neurips|nips)\b'
+  - name: ICML
+    pattern: '\bicml\b'
+  - name: ICLR
+    pattern: '\biclr\b'
+  - name: CVPR
+    pattern: '\bcvpr\b'
+  - name: ICCV
+    pattern: '\biccv\b'
+  - name: ECCV
+    pattern: '\beccv\b'
+  - name: ACL
+    pattern: '\bacl\b'
+  - name: EMNLP
+    pattern: '\bemnlp\b'
+  - name: NAACL
+    pattern: '\bnaacl\b'
+  - name: AAAI
+    pattern: '\baaai\b'
+  - name: IJCAI
+    pattern: '\bijcai\b'
+  - name: Interspeech
+    pattern: '\binterspeech\b'
+  - name: ICASSP
+    pattern: '\bicassp\b'
+  - name: COLM
+    pattern: '\bcolm\b'
+  - name: TMLR
+    pattern: '\btmlr\b'
+  - name: JMLR
+    pattern: '\bjmlr\b'
+  - name: TPAMI
+    pattern: '\b(tpami|pami)\b'
+
+# 负信号：命中直接剔除（行政类/非论文内容）
+negative_keywords:
+  - "call for papers"
+  - "call for participants"
+  - "workshop proposal"
+  - "tutorial proposal"
+  - "doctoral consortium"
+  - "editorial"
+  - "erratum"
+  - "retraction"
+  - "correction to"
+  - "book review"
+
+# 评分权重
+scoring:
+  venue_bonus: 4.0
+  topic_scale: 0.25
+  topic_cap: 2.2
+  hf_upvote_log_scale: 0.9
+  hf_upvote_cap: 2.5
+  freshness_days_2: 1.0
+  freshness_days_7: 0.5
+  freshness_days_14: 0.2
+  abstract_bonus: 0.3
+  code_bonus: 0.4
+  negative_penalty: 8.0
+
+# 摘要生成（GitHub Actions 使用 GitHub Models；本地智能体会覆盖为精读版）
+summary:
+  model: "openai/gpt-4.1-mini"
+  fallback_model: "openai/gpt-4o-mini"
+  max_fulltext_chars: 9000
+  max_output_tokens: 1800
+  temperature: 0.2
