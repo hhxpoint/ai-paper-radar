@@ -40,6 +40,46 @@
     "语音与音频"
    ],
    "venue": ""
+  },
+  "2611.30090": {
+   "date": "2026-11-24",
+   "title": "Post-Training Agents for Long-Document Reasoning",
+   "topics": [
+    "大模型与推理"
+   ],
+   "venue": "NeurIPS 2026"
+  },
+  "2611.28558": {
+   "date": "2026-11-24",
+   "title": "From Reward Engineering to Data-Centric Reinforcement Learning for Effective Agentic Visual Tool Use",
+   "topics": [
+    "大模型与推理"
+   ],
+   "venue": ""
+  },
+  "2611.29592": {
+   "date": "2026-11-24",
+   "title": "Rethinking Closed-Ended Medical VLM Evaluation: From Stable Wrongness to Counterfactual Answer Sensitivity",
+   "topics": [
+    "多模态与视觉"
+   ],
+   "venue": ""
+  },
+  "2611.28804": {
+   "date": "2026-11-24",
+   "title": "Synthetic EHR Generators Should Be Audited Like LLMs",
+   "topics": [
+    "效率、系统与安全"
+   ],
+   "venue": "NeurIPS 2026"
+  },
+  "2611.16933": {
+   "date": "2026-11-24",
+   "title": "Kezek: Splitting Mono Two-Person Conversations into Per-Speaker Tracks for Full-Duplex Dialogue Data",
+   "topics": [
+    "语音与音频"
+   ],
+   "venue": ""
   }
  },
  "titles": {
@@ -47,7 +87,12 @@
   "verifiable logic in medical llms a critical review of agentic clinical reasoning optimization and neuro symbolic grounding": "2611.25898",
   "whu road3d a dataset and benchmark towards fine grained road surface mapping": "2611.25873",
   "embeddings vs grep rethinking the dense advantage in code search": "2611.20455",
-  "eaf tts rethinking codec latent coordinates for flow tts": "2611.27214"
+  "eaf tts rethinking codec latent coordinates for flow tts": "2611.27214",
+  "post training agents for long document reasoning": "2611.30090",
+  "from reward engineering to data centric reinforcement learning for effective agentic visual tool use": "2611.28558",
+  "rethinking closed ended medical vlm evaluation from stable wrongness to counterfactual answer sensitivity": "2611.29592",
+  "synthetic ehr generators should be audited like llms": "2611.28804",
+  "kezek splitting mono two person conversations into per speaker tracks for full duplex dialogue data": "2611.16933"
  },
- "updated_at": "2026-11-23T17:03:38+08:00"
+ "updated_at": "2026-11-24T14:43:52+08:00"
 }

@@ -1,0 +1,268 @@
+{
+ "date": "2026-11-24",
+ "status": "final",
+ "created_at": "2026-11-24T14:40:56+08:00",
+ "updated_at": "2026-11-24T14:43:52+08:00",
+ "window": {
+  "start": "2026-11-20",
+  "end": "2026-11-24"
+ },
+ "fetch": {
+  "window": {
+   "start": "2026-11-20",
+   "end": "2026-11-24"
+  },
+  "arxiv": {
+   "requests": 4,
+   "entries": 1600,
+   "errors": []
+  },
+  "hf": {
+   "entries": 100,
+   "errors": []
+  }
+ },
+ "counts": {
+  "candidates": 1650,
+  "excluded_seen": 3,
+  "excluded_negative": 40,
+  "excluded_short": 0,
+  "pool": 1607
+ },
+ "topic_distribution": {
+  "大模型与推理": 591,
+  "多模态与视觉": 403,
+  "理论、评测与数据": 277,
+  "效率、系统与安全": 128,
+  "强化学习与智能体": 100,
+  "其他": 55,
+  "语音与音频": 53
+ },
+ "selected": [
+  {
+   "id": "2611.30090",
+   "title": "Post-Training Agents for Long-Document Reasoning",
+   "topic": "大模型与推理",
+   "venue": "NeurIPS 2026",
+   "score": 12.55,
+   "published": "2026-11-23",
+   "authors": [
+    "Sushant Mehta",
+    "Logan Ritchie",
+    "Edwin Chen"
+   ],
+   "abs_url": "https://arxiv.org/abs/2611.30090",
+   "pdf_url": "https://arxiv.org/pdf/2611.30090",
+   "html_url": "https://arxiv.org/html/2611.30090",
+   "code_url": "",
+   "hf_url": "",
+   "comment": "Accepted at the Third Workshop on Long-Context Foundation Models (LCFM) at NeurIPS 2026. 14 pages, 2 figures, 7 tables",
+   "abstract": "Professional documents are a long-context workload that retrieval-style benchmarks do not capture. In a ten-domain enterprise collection, a task's evidence is spread across a source document of median length 27 pages (mean 48.8, maximum 873); a third of tasks rest mainly on charts, drawings, and maps; and 70.9% require two or more reasoning hops. We post-train Kimi-K2.7, an open-weight foundation model, at its full context window on 1,465 expert-authored tasks with atomic rubrics from that collection, training rank-32 adapters with one round of privileged-context on-policy self-distillation followed by two rounds of rubric-reward reinforcement learning. We render each PDF as text for training and as extracted text plus selected page images at evaluation. The smoothed RL training reward rises from 0.37 in the first tenth of the run to 0.67 in the last. On the 100-task GDP.pdf holdout, served in a 262,144-token window, strict pass (all rubric criteria met) more than doubles after the second round, from 11.0% to 24.5%, with gains across input lengths up to 240K tokens. Mean tokens generated stay flat (9,803 to 9,733), so the gain does not come from longer outputs. GPT-5.6 Sol's leaderboard strict pass is 30.7% at a measured 3,422 tokens. On 220 out-of-domain GDPval tasks, where the model runs as a long-horizon tool-using agent, mean rubric reward rises from 0.571 to 0.746 after the third round and zero-credit tasks fall from 54 to 10, while messages per task fall 18%, from 70.9 to 58.2. In paired trajectories, the third round replaces a context-thrashing retry loop with one up-front check of all sources, and verification extends from checking that files exist to checking what they contain. We argue that long-context evaluation of agents should report accuracy jointly with tokens and turns, and that datasets of long documents should ship text and image renderings alongside each PDF.",
+   "signals": {
+    "venue": 4.0,
+    "topic": 1.75,
+    "opinion": 5.5,
+    "hf": 0.0,
+    "freshness": 1.0,
+    "code": 0.0,
+    "abstract": 0.3
+   },
+   "note_path": "papers/2026-11/2611.30090-post-training-agents-for-long-document-reasoning.md"
+  },
+  {
+   "id": "2611.28558",
+   "title": "From Reward Engineering to Data-Centric Reinforcement Learning for Effective Agentic Visual Tool Use",
+   "topic": "大模型与推理",
+   "venue": "",
+   "score": 11.4,
+   "published": "2026-11-21",
+   "authors": [
+    "Jin Cui",
+    "Xinyue Long",
+    "Jiepeng Zhou",
+    "Boran Zhao",
+    "Pengju Ren",
+    "Hao Dong"
+   ],
+   "abs_url": "https://arxiv.org/abs/2611.28558",
+   "pdf_url": "https://arxiv.org/pdf/2611.28558",
+   "html_url": "https://arxiv.org/html/2611.28558",
+   "code_url": "",
+   "hf_url": "",
+   "comment": "11 pages, 4 figures",
+   "abstract": "Multimodal large language models (MLLMs) increasingly use external visual tools to acquire evidence during reasoning, yet learning when to invoke these tools remains challenging. Existing tool-use reinforcement learning (RL) methods often rely on call-contingent rewards to encourage beneficial tool use, but such reward engineering can distort the task objective and lead to degenerate calling behaviors. We argue that effective tool-use learning requires identifying not merely which questions are difficult, but which failures are attributable to missing visual evidence and can therefore be corrected through tool observations. We propose AOVO, a data-centric framework that enables MLLMs to learn effective tool use through perception attribution and policy-adaptive data sampling (PADS), without introducing tool-specific rewards. It counterfactually probes the model's reasoning states to identify observation-sensitive questions, distinguishing them from reasoning-dominated ones. PADS then periodically estimates category-level observation effects from recent policy rollouts and dynamically reallocates the training distribution toward questions where visual observations provide informative learning signals, while optimizing solely for final-answer correctness. Experiments across diverse visual perception and multimodal reasoning benchmarks demonstrate consistent improvements over competitive tool-use MLLMs, with causal analysis further validating the data-centric perspective for learning effective visual tool use.",
+   "signals": {
+    "venue": 0.0,
+    "topic": 2.2,
+    "opinion": 8.4,
+    "hf": 0.0,
+    "freshness": 0.5,
+    "code": 0.0,
+    "abstract": 0.3
+   },
+   "note_path": "papers/2026-11/2611.28558-from-reward-engineering-to-data-centric.md"
+  },
+  {
+   "id": "2611.29592",
+   "title": "Rethinking Closed-Ended Medical VLM Evaluation: From Stable Wrongness to Counterfactual Answer Sensitivity",
+   "topic": "多模态与视觉",
+   "venue": "",
+   "score": 10.7,
+   "published": "2026-11-22",
+   "authors": [
+    "Qi Wu",
+    "Xiaoyu Liu",
+    "Ao Wang",
+    "Rongsheng Wang",
+    "Wenting Chen",
+    "Wenxuan Wang",
+    "Qingsong Yao"
+   ],
+   "abs_url": "https://arxiv.org/abs/2611.29592",
+   "pdf_url": "https://arxiv.org/pdf/2611.29592",
+   "html_url": "https://arxiv.org/html/2611.29592",
+   "code_url": "",
+   "hf_url": "",
+   "comment": "",
+   "abstract": "As medical VLMs are increasingly evaluated for clinical decision-support scenarios, knowing when to trust their predictions is critical. Closed-ended medical VQA has become a common benchmark format because it enables automated scoring. Yet, systematic investigation into whether this format changes the reliability problem remains scarce. We identify a failure mode that we call stable wrongness: models can produce incorrect yes/no answers that remain confident and repeatable even when patient-specific visual evidence is removed or mismatched. This failure violates the premise behind sampling-stability uncertainty methods, including recent hallucination-aware calibration (HAC) variants: disagreement is informative only when errors are unstable. When shortcut-driven errors are themselves stable, sampling agreement can remain deceptively high. Motivated by this limitation, we introduce Counterfactual Answer Sensitivity (CAS), which shifts reliability estimation from answer stability to evidence sensitivity. CAS uses cross-modal counterfactual interventions, such as text-only, black, and corrupted images, to audit whether a committed yes/no answer remains supported when visual evidence is invalidated. Across 7 VLMs and 3 benchmarks, CAS outperforms the best HAC-family scores across all evaluated settings, achieving a macro-averaged AUROC gain of +0.150 for error detection. Mechanistic analysis further shows that CAS recovers hidden errors in the HAC-confident region and that its strongest standalone signal is counterfactual decision-boundary shift rather than hard prediction stability. Our findings suggest that closed-ended evaluation should test visual dependence, not only answer stability, in safety-critical medical contexts.",
+   "signals": {
+    "venue": 0.0,
+    "topic": 1.0,
+    "opinion": 8.4,
+    "hf": 0.0,
+    "freshness": 1.0,
+    "code": 0.0,
+    "abstract": 0.3
+   },
+   "note_path": "papers/2026-11/2611.29592-rethinking-closed-ended-medical-vlm-evaluation.md"
+  },
+  {
+   "id": "2611.28804",
+   "title": "Synthetic EHR Generators Should Be Audited Like LLMs",
+   "topic": "效率、系统与安全",
+   "venue": "NeurIPS 2026",
+   "score": 10.55,
+   "published": "2026-11-21",
+   "authors": [
+    "Inigo Stibbe",
+    "Padmanabhan Ramnarayan",
+    "A. Aldo Faisal"
+   ],
+   "abs_url": "https://arxiv.org/abs/2611.28804",
+   "pdf_url": "https://arxiv.org/pdf/2611.28804",
+   "html_url": "https://arxiv.org/html/2611.28804",
+   "code_url": "",
+   "hf_url": "",
+   "comment": "Accepted to the NeurIPS 2026 Generative AI for Health (GenAI4Health) Workshop",
+   "abstract": "Synthetic electronic health record (EHR) generation is increasingly adopting large autoregressive models, yet privacy evaluation has not kept pace, relying heavily on similarity-based heuristics and aggregate metrics that can obscure patient-specific memorisation. We argue that these models should additionally undergo LLM-style memorisation audits at the level of individual patient records. We support this position by comparing membership-inference evaluations across four prominent autoregressive EHR generators, highlighting inconsistent evaluation practices in patient representations and attack procedures. We evaluate trajectory reconstruction from partial context and introduce randomly assigned patient-level canaries to distinguish memorised associations from clinical generalisation. We examine these methods in a GPT-2-style model deliberately overfit to 1,000 MIMIC-IV patient trajectories, creating a controlled setting in which memorisation should be readily detectable. The model systematically recovers training patients' canaries, and their trajectory reconstruction approaches perfect accuracy with increasing context. Held-out patients show no systematic canary recovery, while reconstruction remains low and improves only marginally with additional context. These experiments establish a positive-control baseline for further evaluation of these methods in realistically trained models.",
+   "signals": {
+    "venue": 4.0,
+    "topic": 0.75,
+    "opinion": 5.0,
+    "hf": 0.0,
+    "freshness": 0.5,
+    "code": 0.0,
+    "abstract": 0.3
+   },
+   "note_path": "papers/2026-11/2611.28804-synthetic-ehr-generators-should-be-audited-like.md"
+  },
+  {
+   "id": "2611.16933",
+   "title": "Kezek: Splitting Mono Two-Person Conversations into Per-Speaker Tracks for Full-Duplex Dialogue Data",
+   "topic": "语音与音频",
+   "venue": "",
+   "score": 9.051,
+   "published": "2026-11-12",
+   "authors": [
+    "Bagzhan Karl",
+    "Alizhan Karl"
+   ],
+   "abs_url": "https://arxiv.org/abs/2611.16933",
+   "pdf_url": "https://arxiv.org/pdf/2611.16933",
+   "html_url": "https://arxiv.org/html/2611.16933",
+   "code_url": "https://github.com/Manifestro/kezek",
+   "hf_url": "https://huggingface.co/papers/2611.16933",
+   "comment": "",
+   "abstract": "Full-duplex spoken dialogue models learn turn-taking, overlaps and backchannels from conversations recorded with one channel per speaker, but most available conversational audio is a single mono mix. We present Kezek, a model that turns a mono recording of exactly two people into one track per person with the original length and timing; overlaps and short replies (\"yeah\", \"mm-hm\") stay on the track of the person who said them. Kezek decides who speaks when and who is who once for the whole recording (stage 1: a two-voice activity model guided by a speaker fingerprint trained to be insensitive to phase), and a conditioned time-domain separator only carries out that decision (stage 2), with outputs that always sum to the input. Standard separation metrics miss the failures that matter for dialogue data, so we report short-reply retention, leakage onto the other person's solo, channel swaps and coverage. Against the open pipeline pyannote -> DialogueSidon on the same recordings, Kezek keeps more short replies (0.83 vs. 0.69 on Open Yap test; 0.80 vs. 0.71 over the other's speech on unseen telephone speech from CallHome English), mostly because it returns the whole recording while the external pipeline drops part of it (on the audio both return, reply retention is about the same: 0.859 vs. 0.865 on Open Yap); it also leaks less, swaps channels less often, and runs 4-5 times faster (about 230 hours of audio per GPU-hour). We also report negative results and an ideal-mask ceiling that locate the remaining gap: quiet replies under a louder voice. Code and weights are released under permissive licences.",
+   "signals": {
+    "venue": 0.0,
+    "topic": 1.5,
+    "opinion": 4.9,
+    "hf": 1.751,
+    "freshness": 0.2,
+    "code": 0.4,
+    "abstract": 0.3
+   },
+   "note_path": "papers/2026-11/2611.16933-kezek-splitting-mono-two-person-conversations.md"
+  }
+ ],
+ "backups": [
+  {
+   "id": "2611.29327",
+   "title": "FP-Prune: Rethinking Visual Token Pruning from an Information Gain Perspective",
+   "topic": "效率、系统与安全",
+   "venue": "",
+   "score": 10.45,
+   "abs_url": "https://arxiv.org/abs/2611.29327"
+  },
+  {
+   "id": "2611.26613",
+   "title": "AgentRoboCritic: Understanding the Capability of Frontier Agents on Direct Robot Control",
+   "topic": "大模型与推理",
+   "venue": "",
+   "score": 10.328,
+   "abs_url": "https://arxiv.org/abs/2611.26613"
+  },
+  {
+   "id": "2611.30168",
+   "title": "FiRE: Fine-grained Ranking Evaluation for Machine Translation",
+   "topic": "理论、评测与数据",
+   "venue": "ICML 2026",
+   "score": 10.3,
+   "abs_url": "https://arxiv.org/abs/2611.30168"
+  },
+  {
+   "id": "2611.24249",
+   "title": "From Points to Trajectories: Rethinking Multimodal Alignment for Physical Events",
+   "topic": "大模型与推理",
+   "venue": "",
+   "score": 10.148,
+   "abs_url": "https://arxiv.org/abs/2611.24249"
+  },
+  {
+   "id": "2611.28341",
+   "title": "When Tools Fail, Agents Fabricate: Silent Failure and Verification-First Oversight in Tool-Using LLM Agents",
+   "topic": "大模型与推理",
+   "venue": "NeurIPS 2026",
+   "score": 9.85,
+   "abs_url": "https://arxiv.org/abs/2611.28341"
+  },
+  {
+   "id": "2611.29467",
+   "title": "Beyond Accuracy: A Diagnostic Benchmark for Hypothesis-Driven Experiment Planning in LLM Agents",
+   "topic": "大模型与推理",
+   "venue": "NeurIPS 2026",
+   "score": 9.85,
+   "abs_url": "https://arxiv.org/abs/2611.29467"
+  },
+  {
+   "id": "2611.29975",
+   "title": "Aligning Judge Models to Be Logically Consistent Multi-Rule Interpreters",
+   "topic": "大模型与推理",
+   "venue": "",
+   "score": 9.7,
+   "abs_url": "https://arxiv.org/abs/2611.29975"
+  },
+  {
+   "id": "2611.24059",
+   "title": "Replay, Don't Resample: Off-Policy Consolidation of Long-Horizon RL Experts",
+   "topic": "强化学习与智能体",
+   "venue": "",
+   "score": 9.648,
+   "abs_url": "https://arxiv.org/abs/2611.24059"
+  }
+ ],
+ "digest_path": "digests/2026-11-24.md",
+ "summary_mode": "manual",
+ "finalized_at": "2026-11-24T14:43:52+08:00"
+}
