@@ -23,6 +23,7 @@
 2. 命中后生成形如 `NeurIPS 2025` 的标签（能识别到年份时带年份），显示在 `papers/` 精读页与当日 `digests/` 的论文信息行，方便按会议回看。
 3. 顶会录用同时作为评分信号加分（`venue_bonus`，见 [../docs/SELECTION.md](../docs/SELECTION.md)）；没有标签的论文照常参与评分，标签只影响加分与展示。
 4. 标签来自文本匹配，存在误判可能（例如 comment 里提到的是 workshop、投稿中或往届版本）。引用时以官方论文集为准；发现错误直接修 `papers/` 页面并提交。
+5. 精读页的统一口径（人工修正时照此写）：主会/期刊录用写 `NeurIPS 2026`、`TMLR 2026`；workshop 写 `NeurIPS 2026 Workshop (LCFM)`；只有 arXiv 版本的写 `arXiv 预印本`；投稿中的写 `arXiv 预印本（ICASSP 2027 Workshop C4AI4C 在审）`。后两种不进 `venue` 字段，也不计入 digest 的「顶会/期刊录用」篇数，只在信息行与精读页的「发表状态」里标注；`venues/stats.md` 按 `venue` 字段计数，workshop 会单列一行。
 
 ## 如何添加一个顶会
 

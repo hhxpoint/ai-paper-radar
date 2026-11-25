@@ -1,15 +1,16 @@
 # 顶会与主题统计（自动生成）
 
-> 数据来源：`data/papers.jsonl` · 累计 15 篇 · 更新于 2026-11-25 10:53 (UTC+8)  
+> 数据来源：`data/papers.jsonl` · 累计 15 篇 · 更新于 2026-11-25 10:57 (UTC+8)  
 > 本页由 `scripts/paper_radar.py` 自动生成，请勿手动编辑。
 
 ## 顶会/期刊论文
 
 | Venue | 篇数 |
 | --- | --- |
-| NeurIPS 2026 | 3 |
 | TMLR 2026 | 1 |
-| ICASSP 2027 | 1 |
+| NeurIPS 2026 Workshop (GenAI4Health) | 1 |
+| NeurIPS 2026 Workshop (LCFM) | 1 |
+| NeurIPS 2026 | 1 |
 
 ## 主题分布
 

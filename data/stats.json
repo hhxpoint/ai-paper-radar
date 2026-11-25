@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-25T10:53:31+08:00",
+ "updated_at": "2026-11-25T10:57:09+08:00",
  "papers_total": 15,
  "digests_total": 3,
  "empty_days": 0,
@@ -12,9 +12,10 @@
   "效率、系统与安全": 1
  },
  "by_venue": {
-  "NeurIPS 2026": 3,
   "TMLR 2026": 1,
-  "ICASSP 2027": 1
+  "NeurIPS 2026 Workshop (GenAI4Health)": 1,
+  "NeurIPS 2026 Workshop (LCFM)": 1,
+  "NeurIPS 2026": 1
  },
  "by_month": {
   "2026-11": 15
