@@ -1,0 +1,269 @@
+{
+ "date": "2026-11-25",
+ "status": "final",
+ "created_at": "2026-11-25T10:50:54+08:00",
+ "updated_at": "2026-11-25T10:53:31+08:00",
+ "window": {
+  "start": "2026-11-21",
+  "end": "2026-11-25"
+ },
+ "fetch": {
+  "window": {
+   "start": "2026-11-21",
+   "end": "2026-11-25"
+  },
+  "arxiv": {
+   "requests": 4,
+   "entries": 1470,
+   "errors": []
+  },
+  "hf": {
+   "entries": 100,
+   "errors": []
+  }
+ },
+ "counts": {
+  "candidates": 1508,
+  "excluded_seen": 4,
+  "excluded_negative": 35,
+  "excluded_short": 1,
+  "pool": 1468
+ },
+ "topic_distribution": {
+  "大模型与推理": 543,
+  "多模态与视觉": 367,
+  "理论、评测与数据": 259,
+  "效率、系统与安全": 108,
+  "强化学习与智能体": 90,
+  "其他": 55,
+  "语音与音频": 46
+ },
+ "selected": [
+  {
+   "id": "2611.31115",
+   "title": "RUIBench: What Makes a Good Robot-Use Interface?",
+   "topic": "大模型与推理",
+   "venue": "",
+   "score": 12.85,
+   "published": "2026-11-23",
+   "authors": [
+    "Yanzhe Chen",
+    "Zhijun Cao",
+    "Zechen Bai",
+    "Wenzheng Zeng",
+    "Kevin Yuchen Ma",
+    "Yiqi Lin",
+    "Guoqiang Liang",
+    "Xiaokang Liu",
+    "Ke Sun",
+    "Kevin Qinghong Lin",
+    "Mike Zheng Shou"
+   ],
+   "abs_url": "https://arxiv.org/abs/2611.31115",
+   "pdf_url": "https://arxiv.org/pdf/2611.31115",
+   "html_url": "https://arxiv.org/html/2611.31115",
+   "code_url": "https://github.com/showlab/RUIBench",
+   "hf_url": "https://huggingface.co/papers/2611.31115",
+   "comment": "Project website: https://showlab.github.io/RUIBench",
+   "abstract": "Foundation models can reason about complex physical tasks, yet translating this intelligence into reliable robot execution remains challenging. We argue that a critical, often overlooked factor is the robot-use interface (RUI), which determines how agents express and execute physical actions. To systematically study its impact, we introduce RUIBench, comprising 30 manipulation tasks across five suites spanning world knowledge, in-context learning, discovery, dynamic interaction, and contact-rich manipulation. We further develop RUIKit, a unified framework that crosses six action abstractions with two interaction forms, yielding 13 interfaces under shared perception and control. In simulation, changing only the RUI shifts a frontier agent's success rate from 45% to 81%, and that of a fine-tuned 4B model from 13% to 47%. Our analysis reveals that effective interfaces reduce unnecessary decisions while preserving essential feedback, with their benefits shaped by agent behavior and physical uncertainty. We further uncover a verification gap, where agents frequently declare success despite observable failures, revealing the need for task-level verification beyond individual actions. Together, these findings establish RUI design as a critical factor in embodied agent reliability.",
+   "signals": {
+    "venue": 0.0,
+    "topic": 0.75,
+    "opinion": 7.9,
+    "hf": 2.5,
+    "freshness": 1.0,
+    "code": 0.4,
+    "abstract": 0.3
+   },
+   "note_path": "papers/2026-11/2611.31115-ruibench-what-makes-a-good-robot-use-interface.md"
+  },
+  {
+   "id": "2611.30955",
+   "title": "LeCellModel: Interpretable Density Estimation over the Gene Expression Manifold",
+   "topic": "理论、评测与数据",
+   "venue": "NeurIPS 2026",
+   "score": 11.8,
+   "published": "2026-11-23",
+   "authors": [
+    "Gil Karin",
+    "Artemii Bakulin",
+    "Nir Yosef"
+   ],
+   "abs_url": "https://arxiv.org/abs/2611.30955",
+   "pdf_url": "https://arxiv.org/pdf/2611.30955",
+   "html_url": "https://arxiv.org/html/2611.30955",
+   "code_url": "",
+   "hf_url": "",
+   "comment": "Accepted at NeurIPS 2026. 23 pages",
+   "abstract": "Representation learning for single-cell RNA-seq has been evaluated by the identities representations capture -- cell types, lineages, perturbations -- rather than how faithfully they model the distribution of cell states on the gene expression manifold. As a result, density estimation, rare-state detection, perturbation scoring, and gene-level attribution are bolted onto frozen embeddings as separate models, disconnected from the geometry of the data. We argue that modeling the distribution of cell states should be the primary objective, and that representation quality follows from it. Building on LeJEPA, whose SIGReg objective enforces a provably optimal isotropic Gaussian latent, we introduce LeCellModel, which reads the encoder's Jacobian log-volume (JEPA-SCORE) under this Gaussian latent as a relative typicality score. Across several datasets, LeCellModel outperforms established methods on the scIB benchmark for representation quality. Furthermore, we show that LeCellModel enables detection of rare expression states using JEPA-SCORE as a typicality measure, applying it to a controlled cytokine panel, where it identifies stimulated cells across minority fractions and tracks pathway-response magnitude. We introduce gene-level interpretability of the typicality score -- to our knowledge, the first method for analyzing JEPA-SCORE in feature space. Leveraging this framework, LeCellModel recapitulates the known association of a profibrotic macrophage program with idiopathic pulmonary fibrosis, and discovers a CD177+ activated regulatory T cell subpopulation previously described only in tumor contexts. Both findings emerge directly from the geometry of the learned embedding, without relying on supervised annotations.",
+   "signals": {
+    "venue": 4.0,
+    "topic": 1.0,
+    "opinion": 5.5,
+    "hf": 0.0,
+    "freshness": 1.0,
+    "code": 0.0,
+    "abstract": 0.3
+   },
+   "note_path": "papers/2026-11/2611.30955-lecellmodel-interpretable-density-estimation.md"
+  },
+  {
+   "id": "2611.31228",
+   "title": "Language Models Steer on Injected Uncertainty Tokens, but Fail to Self-Monitor In Situ",
+   "topic": "大模型与推理",
+   "venue": "",
+   "score": 10.7,
+   "published": "2026-11-23",
+   "authors": [
+    "Daniel Theron"
+   ],
+   "abs_url": "https://arxiv.org/abs/2611.31228",
+   "pdf_url": "https://arxiv.org/pdf/2611.31228",
+   "html_url": "https://arxiv.org/html/2611.31228",
+   "code_url": "",
+   "hf_url": "",
+   "comment": "",
+   "abstract": "Prompting language models to verbalize stepwise numerical confidence during generation is an increasingly popular approach for triggering backtracking and error correction in agentic reasoning. This strategy presupposes two capabilities: (1) in-situ monitoring fidelity (does confidence drop when an error occurs?) and (2) downstream steering control (does an uncertainty token causally steer the model to repair its error?). We evaluated four open-weights models (Qwen2.5-7B, Llama-3.1-8B, Mistral-7B, and Phi-4, 14.7B) across 15,200 math benchmark attempts, isolating 2,017 reasoning errors within each model's capability frontier. Applying 27,568 counterfactual continuations across these failure points, we demonstrate a consistent decoupling between monitoring and control. On monitoring, all four models fail to detect their own errors. Verbalized confidence does not distinguish mistake steps from sound reasoning, yielding near-chance within-position AUROCs between 0.500 and 0.561. Even at a model's first reasoning error, trajectory confidence remains saturated at 95.1% to 99.9%, with noticeable drops ($\\ge 10$ points) appearing on fewer than 9% of errors in Llama and under 1.6% in the other three models. In contrast, models respond readily to external uncertainty: injecting a low-confidence tag (10%) at the error step significantly increases downstream correction across all models (+3.7 to +22.5 points over format-matched 95% certainty; all $p \\le 0.0022$), reaching up to 38.5% under active rethinking instructions. However, injecting doubt onto already-correct steps causes models to discard valid reasoning, reducing solve rates by up to 22.8 points. Inference-time self-correction is thus bottlenecked by in-situ error detection rather than downstream repair capacity: models readily steer toward recovery when prompted with doubt, yet fail to self-monitor during generation.",
+   "signals": {
+    "venue": 0.0,
+    "topic": 1.5,
+    "opinion": 7.9,
+    "hf": 0.0,
+    "freshness": 1.0,
+    "code": 0.0,
+    "abstract": 0.3
+   },
+   "note_path": "papers/2026-11/2611.31228-language-models-steer-on-injected-uncertainty.md"
+  },
+  {
+   "id": "2611.31774",
+   "title": "BODYBENCH: Evaluating Adversarial Image Defenses Against AI Nudification Inpainting",
+   "topic": "多模态与视觉",
+   "venue": "",
+   "score": 10.45,
+   "published": "2026-11-24",
+   "authors": [
+    "Li Qiwei",
+    "Salma Abdel Magid",
+    "Olga Russakovsky",
+    "Eric Gilbert",
+    "Sarita Schoenebeck"
+   ],
+   "abs_url": "https://arxiv.org/abs/2611.31774",
+   "pdf_url": "https://arxiv.org/pdf/2611.31774",
+   "html_url": "https://arxiv.org/html/2611.31774",
+   "code_url": "",
+   "hf_url": "",
+   "comment": "Li Qiwei and Salma Abdel Magid contributed equally to this work and share first authorship",
+   "abstract": "Adversarial perturbation defenses protect images from unauthorized edits by adding imperceptible noise. Yet none of these methods have been evaluated against nudification, despite AI-generated non-consensual intimate imagery (AIG-NCII) being among the most documented harms of generative AI. Moreover, nudification edits are readily carried out through inpainting, the primary setting these protection methods are designed to defend against. We argue this is a problem-formulation failure since prior threat models do not correspond to nudification edits (also called attacks). The misalignment of existing approaches is structural, spanning mask shape, training and testing prompt distributions, and success criterion which causes existing evaluations to systematically overestimate protection effectiveness. We reformulate image protection against unauthorized editing around this documented harm. We introduce BODYBENCH, a benchmark of 648 fully synthetic clothed adult subjects, each paired with 11 mask variants spanning body, face, and context regions. We propose three harm-aligned metrics: sexualization, naturalness, and recognizability that jointly determine whether an inpainted output constitutes a successful nudification attack. Auditing four recent protection methods (PhotoGuard, DiffusionGuard, AdvPaint, DiffVax) on BODYBENCH, we find that protection succeeds in only one configuration of one method, and only under exact mask alignment between defender and attacker---a condition no real defender can guarantee and one that we show is easily always bypassed. We also show that standard evaluation metrics such as peak signal-to-noise ratio (PSNR) are essentially uncorrelated with nudification protection. BODYBENCH makes this misalignment measurable and provides a foundation for defenses grounded in documented harm.",
+   "signals": {
+    "venue": 0.0,
+    "topic": 0.75,
+    "opinion": 8.4,
+    "hf": 0.0,
+    "freshness": 1.0,
+    "code": 0.0,
+    "abstract": 0.3
+   },
+   "note_path": "papers/2026-11/2611.31774-bodybench-evaluating-adversarial-image-defenses.md"
+  },
+  {
+   "id": "2611.29871",
+   "title": "Which Layer to Trust? Layer Selection in Frozen Speech Encoders for Singing-Voice Deepfake Detection under Signal Corruption",
+   "topic": "语音与音频",
+   "venue": "ICASSP 2027",
+   "score": 7.55,
+   "published": "2026-11-23",
+   "authors": [
+    "Benjamin Hurt",
+    "Yefei Yang"
+   ],
+   "abs_url": "https://arxiv.org/abs/2611.29871",
+   "pdf_url": "https://arxiv.org/pdf/2611.29871",
+   "html_url": "https://arxiv.org/html/2611.29871",
+   "code_url": "",
+   "hf_url": "",
+   "comment": "5 pages, 3 figures, 1 table. Under review at C4AI4C @ ICASSP 2027. Hurt and Yang equal contributors",
+   "abstract": "Frozen self-supervised speech encoders have been frequently used for audio deepfake detection. However, the layers are usually chosen from a development set. We examine this choice for singing-voice deepfake detection on CtrSVDD. We train one detection head per layer, plus a learned layer mix, on frozen XEUS (3-4 seeds) and XLS-R (2 seeds). We test on clean audio and under noise, reverberation and lossy coding. On clean audio, the middle layers beat the last layer in both encoders and the learned mix does not beat the best single layer. The layer chosen on the development set is 2.3 (XEUS) and 4.1 (XLS-R) percentage points of EER worse than the best test layer. Under noise and coding, XEUS's best layers stay in the middle, while under reverberation its upper layers catch up, whereas XLS-R's best layer moves shallower. In an exploratory analysis, XEUS detects a commercial synthesis attack best with an earlier layer, especially under noise. The layer therefore cannot be chosen reliably on an in-domain development set and clean audio alone.",
+   "signals": {
+    "venue": 4.0,
+    "topic": 1.25,
+    "opinion": 1.0,
+    "hf": 0.0,
+    "freshness": 1.0,
+    "code": 0.0,
+    "abstract": 0.3
+   },
+   "note_path": "papers/2026-11/2611.29871-which-layer-to-trust-layer-selection-in-frozen.md"
+  }
+ ],
+ "backups": [
+  {
+   "id": "2611.24249",
+   "title": "From Points to Trajectories: Rethinking Multimodal Alignment for Physical Events",
+   "topic": "大模型与推理",
+   "venue": "",
+   "score": 10.571,
+   "abs_url": "https://arxiv.org/abs/2611.24249"
+  },
+  {
+   "id": "2611.26613",
+   "title": "AgentRoboCritic: Understanding the Capability of Frontier Agents on Direct Robot Control",
+   "topic": "大模型与推理",
+   "venue": "",
+   "score": 10.328,
+   "abs_url": "https://arxiv.org/abs/2611.26613"
+  },
+  {
+   "id": "2611.30168",
+   "title": "FiRE: Fine-grained Ranking Evaluation for Machine Translation",
+   "topic": "理论、评测与数据",
+   "venue": "ICML 2026",
+   "score": 10.3,
+   "abs_url": "https://arxiv.org/abs/2611.30168"
+  },
+  {
+   "id": "2611.31582",
+   "title": "LatentLens: Rethinking Latent Interface in Multi-Agent Systems",
+   "topic": "大模型与推理",
+   "venue": "",
+   "score": 10.2,
+   "abs_url": "https://arxiv.org/abs/2611.31582"
+  },
+  {
+   "id": "2611.29327",
+   "title": "FP-Prune: Rethinking Visual Token Pruning from an Information Gain Perspective",
+   "topic": "效率、系统与安全",
+   "venue": "",
+   "score": 9.95,
+   "abs_url": "https://arxiv.org/abs/2611.29327"
+  },
+  {
+   "id": "2611.29975",
+   "title": "Aligning Judge Models to Be Logically Consistent Multi-Rule Interpreters",
+   "topic": "大模型与推理",
+   "venue": "",
+   "score": 9.7,
+   "abs_url": "https://arxiv.org/abs/2611.29975"
+  },
+  {
+   "id": "2611.31679",
+   "title": "Rethinking Document Indexing for LLM-based Analysis",
+   "topic": "大模型与推理",
+   "venue": "",
+   "score": 9.65,
+   "abs_url": "https://arxiv.org/abs/2611.31679"
+  },
+  {
+   "id": "2611.30460",
+   "title": "Rethinking the Evaluation of Contrastive Decoding for Hallucination Mitigation in Multimodal Large Language Models",
+   "topic": "大模型与推理",
+   "venue": "",
+   "score": 9.5,
+   "abs_url": "https://arxiv.org/abs/2611.30460"
+  }
+ ],
+ "digest_path": "digests/2026-11-25.md",
+ "summary_mode": "manual",
+ "finalized_at": "2026-11-25T10:53:31+08:00"
+}

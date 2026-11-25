@@ -80,6 +80,46 @@
     "语音与音频"
    ],
    "venue": ""
+  },
+  "2611.31115": {
+   "date": "2026-11-25",
+   "title": "RUIBench: What Makes a Good Robot-Use Interface?",
+   "topics": [
+    "大模型与推理"
+   ],
+   "venue": ""
+  },
+  "2611.30955": {
+   "date": "2026-11-25",
+   "title": "LeCellModel: Interpretable Density Estimation over the Gene Expression Manifold",
+   "topics": [
+    "理论、评测与数据"
+   ],
+   "venue": "NeurIPS 2026"
+  },
+  "2611.31228": {
+   "date": "2026-11-25",
+   "title": "Language Models Steer on Injected Uncertainty Tokens, but Fail to Self-Monitor In Situ",
+   "topics": [
+    "大模型与推理"
+   ],
+   "venue": ""
+  },
+  "2611.31774": {
+   "date": "2026-11-25",
+   "title": "BODYBENCH: Evaluating Adversarial Image Defenses Against AI Nudification Inpainting",
+   "topics": [
+    "多模态与视觉"
+   ],
+   "venue": ""
+  },
+  "2611.29871": {
+   "date": "2026-11-25",
+   "title": "Which Layer to Trust? Layer Selection in Frozen Speech Encoders for Singing-Voice Deepfake Detection under Signal Corruption",
+   "topics": [
+    "语音与音频"
+   ],
+   "venue": "ICASSP 2027"
   }
  },
  "titles": {
@@ -92,7 +132,12 @@
   "from reward engineering to data centric reinforcement learning for effective agentic visual tool use": "2611.28558",
   "rethinking closed ended medical vlm evaluation from stable wrongness to counterfactual answer sensitivity": "2611.29592",
   "synthetic ehr generators should be audited like llms": "2611.28804",
-  "kezek splitting mono two person conversations into per speaker tracks for full duplex dialogue data": "2611.16933"
+  "kezek splitting mono two person conversations into per speaker tracks for full duplex dialogue data": "2611.16933",
+  "ruibench what makes a good robot use interface": "2611.31115",
+  "lecellmodel interpretable density estimation over the gene expression manifold": "2611.30955",
+  "language models steer on injected uncertainty tokens but fail to self monitor in situ": "2611.31228",
+  "bodybench evaluating adversarial image defenses against ai nudification inpainting": "2611.31774",
+  "which layer to trust layer selection in frozen speech encoders for singing voice deepfake detection under signal corruption": "2611.29871"
  },
- "updated_at": "2026-11-24T14:43:52+08:00"
+ "updated_at": "2026-11-25T10:53:31+08:00"
 }
