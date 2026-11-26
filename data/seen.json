@@ -120,6 +120,46 @@
     "语音与音频"
    ],
    "venue": ""
+  },
+  "2611.33692": {
+   "date": "2026-11-26",
+   "title": "Rethinking Sequential Locate-Then-Edit: Optimality and Stability",
+   "topics": [
+    "大模型与推理"
+   ],
+   "venue": "NeurIPS 2026"
+  },
+  "2611.31975": {
+   "date": "2026-11-26",
+   "title": "Localizing Cross-Lingual Generalization in Parameter Space",
+   "topics": [
+    "理论、评测与数据"
+   ],
+   "venue": "EMNLP 2026"
+  },
+  "2611.33229": {
+   "date": "2026-11-26",
+   "title": "Effect-Driven Skill Abstractions for Offline Reinforcement Learning",
+   "topics": [
+    "强化学习与智能体"
+   ],
+   "venue": "NeurIPS 2026"
+  },
+  "2611.32131": {
+   "date": "2026-11-26",
+   "title": "Rethinking Reasoning Effort Training in Large Language Models: On-Policy Distillation or Reinforcement Learning?",
+   "topics": [
+    "大模型与推理"
+   ],
+   "venue": ""
+  },
+  "2611.32593": {
+   "date": "2026-11-26",
+   "title": "Perfect Scores, Misplaced Explanations: A Controlled Study of Explainability in Audio Deepfake Detection",
+   "topics": [
+    "语音与音频"
+   ],
+   "venue": "ICASSP"
   }
  },
  "titles": {
@@ -137,7 +177,12 @@
   "lecellmodel interpretable density estimation over the gene expression manifold": "2611.30955",
   "language models steer on injected uncertainty tokens but fail to self monitor in situ": "2611.31228",
   "bodybench evaluating adversarial image defenses against ai nudification inpainting": "2611.31774",
-  "which layer to trust layer selection in frozen speech encoders for singing voice deepfake detection under signal corruption": "2611.29871"
+  "which layer to trust layer selection in frozen speech encoders for singing voice deepfake detection under signal corruption": "2611.29871",
+  "rethinking sequential locate then edit optimality and stability": "2611.33692",
+  "localizing cross lingual generalization in parameter space": "2611.31975",
+  "effect driven skill abstractions for offline reinforcement learning": "2611.33229",
+  "rethinking reasoning effort training in large language models on policy distillation or reinforcement learning": "2611.32131",
+  "perfect scores misplaced explanations a controlled study of explainability in audio deepfake detection": "2611.32593"
  },
- "updated_at": "2026-11-25T10:53:31+08:00"
+ "updated_at": "2026-11-26T11:59:43+08:00"
 }

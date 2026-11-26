@@ -1,0 +1,271 @@
+{
+ "date": "2026-11-26",
+ "status": "final",
+ "created_at": "2026-11-26T11:56:34+08:00",
+ "updated_at": "2026-11-26T11:59:43+08:00",
+ "window": {
+  "start": "2026-11-22",
+  "end": "2026-11-26"
+ },
+ "fetch": {
+  "window": {
+   "start": "2026-11-22",
+   "end": "2026-11-26"
+  },
+  "arxiv": {
+   "requests": 4,
+   "entries": 1600,
+   "errors": []
+  },
+  "hf": {
+   "entries": 100,
+   "errors": []
+  }
+ },
+ "counts": {
+  "candidates": 1614,
+  "excluded_seen": 4,
+  "excluded_negative": 35,
+  "excluded_short": 0,
+  "pool": 1575
+ },
+ "topic_distribution": {
+  "大模型与推理": 551,
+  "多模态与视觉": 423,
+  "理论、评测与数据": 279,
+  "效率、系统与安全": 127,
+  "强化学习与智能体": 89,
+  "其他": 62,
+  "语音与音频": 44
+ },
+ "selected": [
+  {
+   "id": "2611.33692",
+   "title": "Rethinking Sequential Locate-Then-Edit: Optimality and Stability",
+   "topic": "大模型与推理",
+   "venue": "NeurIPS 2026",
+   "score": 13.7,
+   "published": "2026-11-25",
+   "authors": [
+    "Bingqing Liu",
+    "Wei Liu",
+    "Zhiying Deng",
+    "Jun Wang",
+    "Yuhua Li",
+    "Ruixuan Li"
+   ],
+   "abs_url": "https://arxiv.org/abs/2611.33692",
+   "pdf_url": "https://arxiv.org/pdf/2611.33692",
+   "html_url": "https://arxiv.org/html/2611.33692",
+   "code_url": "",
+   "hf_url": "",
+   "comment": "Accepted by NeurIPS 2026. 10 pages of main text, 6 figures, and 2 tables. The full manuscript contains 41 pages, including references and supplementary material. This work concerns sequential knowledge editing within the locate-then-edit framework",
+   "abstract": "The Locate-Then-Edit framework enables efficient knowledge updates in large language models without requiring full retraining. Recent research has increasingly focused on sequential editing, where knowledge arrives continuously and the model is updated incrementally. However, existing sequential methods commonly suffer from catastrophic forgetting and model collapse after only a few hundred edits. In contrast, batch editing - which jointly optimizes all edits and yields the optimal solution under a specified editing objective - can support tens of thousands of edits with high edit efficacy while preserving the model's general capabilities, resulting in a substantial performance gap between the two editing paradigms. In this paper, we demonstrate that this gap can be closed via a batch-equivalent sequential editing approach. Moreover, we investigate the underlying mechanism of model degradation in existing sequential methods by analyzing the convergence behavior of weight perturbations as edits accumulate. Our analysis reveals that current methods typically exhibit linear or logarithmic growth in perturbation, whereas the proposed batch-equivalent method achieves time-invariant growth, thereby theoretically guaranteeing long-term stability and preserving the integrity of pretrained knowledge throughout massive-scale sequential editing.",
+   "signals": {
+    "venue": 4.0,
+    "topic": 0.5,
+    "opinion": 7.9,
+    "hf": 0.0,
+    "freshness": 1.0,
+    "code": 0.0,
+    "abstract": 0.3
+   },
+   "note_path": "papers/2026-11/2611.33692-rethinking-sequential-locate-then-edit.md"
+  },
+  {
+   "id": "2611.31975",
+   "title": "Localizing Cross-Lingual Generalization in Parameter Space",
+   "topic": "理论、评测与数据",
+   "venue": "EMNLP 2026",
+   "score": 12.5,
+   "published": "2026-11-24",
+   "authors": [
+    "Yeoreum Lee",
+    "Jaeseong Lee",
+    "Seung-won Hwang"
+   ],
+   "abs_url": "https://arxiv.org/abs/2611.31975",
+   "pdf_url": "https://arxiv.org/pdf/2611.31975",
+   "html_url": "https://arxiv.org/html/2611.31975",
+   "code_url": "",
+   "hf_url": "",
+   "comment": "EMNLP 2026",
+   "abstract": "Cross-lingual transfer is uneven across tasks, succeeding for natural language understanding but often failing for mathematical reasoning. We argue that this asymmetry is governed by the geometry of parameter space. Specifically, cross-lingual generalization is determined by whether English and target-language LoRA adapters share a low-error basin. To test this, we use linear mode connectivity (LMC) between English and target-language adapters, evaluating on three tasks. We find that NLI and QA model-language pairs are mostly linearly connected, whereas mathematical reasoning (Math) pairs are not, indicating that basin geometry is task-dependent. Such disconnection in Math is ``local'' rather than global. A small target-language task sample, applied only to the English adapter's language encoding or semantic composition layers, is enough to repair it. Cross-lingual generalization is also factorizable into language-specific encoding and language-agnostic composition, each supplied separately from a cheaper signal. English task data routed to the composition layers and an unlabeled target-language corpus routed to the language encoding layers each alleviate it on their own for nearly every pair. Composition is the more influential of these, and it needs no target-language data. Together, these results suggest that cross-lingual generalization decomposes into language-specific and language-agnostic components in parameter space. This decomposition offers a practical route for low-resource cross-lingual adaptation.",
+   "signals": {
+    "venue": 4.0,
+    "topic": 0.5,
+    "opinion": 6.7,
+    "hf": 0.0,
+    "freshness": 1.0,
+    "code": 0.0,
+    "abstract": 0.3
+   },
+   "note_path": "papers/2026-11/2611.31975-localizing-cross-lingual-generalization-in.md"
+  },
+  {
+   "id": "2611.33229",
+   "title": "Effect-Driven Skill Abstractions for Offline Reinforcement Learning",
+   "topic": "强化学习与智能体",
+   "venue": "NeurIPS 2026",
+   "score": 11.8,
+   "published": "2026-11-24",
+   "authors": [
+    "Burcu Kilic",
+    "David Drexel",
+    "Emre Ugur",
+    "Justus Piater"
+   ],
+   "abs_url": "https://arxiv.org/abs/2611.33229",
+   "pdf_url": "https://arxiv.org/pdf/2611.33229",
+   "html_url": "https://arxiv.org/html/2611.33229",
+   "code_url": "",
+   "hf_url": "",
+   "comment": "The Fortieth Annual Conference on Neural Information Processing Systems, NeurIPS 2026",
+   "abstract": "We seek to learn discrete skill abstractions to facilitate long-horizon, goal-conditioned reinforcement-learning (RL) tasks. Recent approaches have shown success by quantizing actions via clustering or reconstruction. However, these objectives lead to skills that are not directly related to what the current state affords or what the goal requires. Instead, we argue that goal-directed skills should be driven by \\emph{how they affect the state} of the agent. To realize this, we introduce a novel quantization method for action chunks that optimizes next-state predictions conditioned on the current state and action. This objective encourages skills to be distinguished by the future states they lead to, resulting in a vocabulary that spans diverse outcomes reachable from a given state. Our framework can easily be paired with common offline RL methods by replacing their continuous actor head with a discrete one that selects among the learned skills. We can execute these skills in the environment by converting them back to continuous actions using a trained low-level controller. Experiments on benchmark navigation and manipulation tasks largely show substantial and consistent improvements over both the continuous-actor baselines and reconstruction-based discretizations. Our project page can be found at: https://burcukilic.github.io/projects/effect-driven-skill-abstractions/.",
+   "signals": {
+    "venue": 4.0,
+    "topic": 1.0,
+    "opinion": 5.5,
+    "hf": 0.0,
+    "freshness": 1.0,
+    "code": 0.0,
+    "abstract": 0.3
+   },
+   "note_path": "papers/2026-11/2611.33229-effect-driven-skill-abstractions-for-offline.md"
+  },
+  {
+   "id": "2611.32131",
+   "title": "Rethinking Reasoning Effort Training in Large Language Models: On-Policy Distillation or Reinforcement Learning?",
+   "topic": "大模型与推理",
+   "venue": "",
+   "score": 10.7,
+   "published": "2026-11-24",
+   "authors": [
+    "Tianliang Lv",
+    "Hao Li",
+    "Xinchao Xu",
+    "Zhengkun Zhang",
+    "Ju Huo"
+   ],
+   "abs_url": "https://arxiv.org/abs/2611.32131",
+   "pdf_url": "https://arxiv.org/pdf/2611.32131",
+   "html_url": "https://arxiv.org/html/2611.32131",
+   "code_url": "",
+   "hf_url": "",
+   "comment": "Technical Report",
+   "abstract": "Large language models have shown strong capabilities on complex tasks, yet how to control their reasoning effort remains a significant challenge for practical deployment. This paper provides a systematic investigation of reasoning-effort training, contrasting reinforcement learning (RL) with on-policy distillation (OPD). We find that compressing reasoning and separating effort tiers are governed by different signals. Length-penalized RL reliably compresses a single policy, reducing thinking on AIME25 by 70\\% without accuracy loss, but collapses the tiers when they are trained jointly. Multi-teacher OPD separates them: across 33 benchmarks, low and medium use 58\\% and 43\\% fewer thinking tokens than high, while high improves on the reference policy by 3.1 points. We trace this difference to the training signal. A sequence-level reward cannot tell tier-specific behavior from shared behavior, whereas OPD supplies a tier-specific target at every visited state, including the decision to stop. Building on this analysis, we show that a single token-level KL anchor on the high tier is sufficient to learn separated tiers within one RL stage, and that natural-language effort instructions make this separation emerge from the start of training, yielding a policy competitive with multi-teacher OPD at matched thinking length. Finally, the separation built by dense targets holds only on the states seen in training: it does not carry over to unseen agentic tasks, where effort acts mainly through the number of interaction turns, whereas the compression induced by sequence-level rewards does.",
+   "signals": {
+    "venue": 0.0,
+    "topic": 2.0,
+    "opinion": 7.4,
+    "hf": 0.0,
+    "freshness": 1.0,
+    "code": 0.0,
+    "abstract": 0.3
+   },
+   "note_path": "papers/2026-11/2611.32131-rethinking-reasoning-effort-training-in-large.md"
+  },
+  {
+   "id": "2611.32593",
+   "title": "Perfect Scores, Misplaced Explanations: A Controlled Study of Explainability in Audio Deepfake Detection",
+   "topic": "语音与音频",
+   "venue": "ICASSP",
+   "score": 7.25,
+   "published": "2026-11-24",
+   "authors": [
+    "David Combei",
+    "Dan Oneata",
+    "Francesco Paissan",
+    "Cem Subakan",
+    "Horia Cucu",
+    "Adriana Stan"
+   ],
+   "abs_url": "https://arxiv.org/abs/2611.32593",
+   "pdf_url": "https://arxiv.org/pdf/2611.32593",
+   "html_url": "https://arxiv.org/html/2611.32593",
+   "code_url": "",
+   "hf_url": "",
+   "comment": "Submitted to ICASSP worshop on Explainability, Robustness, and Controllability of Language Modeling for Speech and Audio",
+   "abstract": "What if an explanation achieves perfect scores but it is uninterpretable? We show that this happens when explaining audio deepfake detectors. Using an optimization-based method, we explain a state-of-the-art wav2vec2-based detector. The explanations achieve optimal scores on standard explainability metrics, i.e. fidelity and faithfulness. Visual inspection, however, reveals unintuitive and uninterpretable patterns. To understand this discrepancy, we run a controlled perturbation study in which we modify known frequency regions of the speech signal. Although we propose a model that is able to obtain close-to-optimal results with respect to the metrics, the explanations locate the manipulated region only when it is fixed across samples, and mostly fall to chance level when it varies. We further show that the signal used to fill the removed regions largely determines the explanation and its localization, without being reflected in the metrics.",
+   "signals": {
+    "venue": 4.0,
+    "topic": 0.75,
+    "opinion": 1.2,
+    "hf": 0.0,
+    "freshness": 1.0,
+    "code": 0.0,
+    "abstract": 0.3
+   },
+   "note_path": "papers/2026-11/2611.32593-perfect-scores-misplaced-explanations-a.md"
+  }
+ ],
+ "backups": [
+  {
+   "id": "2611.32801",
+   "title": "Scaling Laws of Ensemble Uncertainty in Language Models",
+   "topic": "大模型与推理",
+   "venue": "",
+   "score": 10.2,
+   "abs_url": "https://arxiv.org/abs/2611.32801"
+  },
+  {
+   "id": "2611.33036",
+   "title": "Towards Realistic Evaluation of Uncertainty Quantification for LLM-Based Recommender Systems",
+   "topic": "理论、评测与数据",
+   "venue": "TMLR 2026",
+   "score": 9.95,
+   "abs_url": "https://arxiv.org/abs/2611.33036"
+  },
+  {
+   "id": "2611.33670",
+   "title": "Rethinking Knowledge Distillation for Diffusion Language Models",
+   "topic": "效率、系统与安全",
+   "venue": "",
+   "score": 9.95,
+   "abs_url": "https://arxiv.org/abs/2611.33670"
+  },
+  {
+   "id": "2611.31582",
+   "title": "LatentLens: Rethinking Latent Interface in Multi-Agent Systems",
+   "topic": "大模型与推理",
+   "venue": "",
+   "score": 9.7,
+   "abs_url": "https://arxiv.org/abs/2611.31582"
+  },
+  {
+   "id": "2611.33145",
+   "title": "Lost on Campus: Evaluating Embodied Spatial Reasoning of Vision-Language Models in the Wild",
+   "topic": "大模型与推理",
+   "venue": "NeurIPS 2026",
+   "score": 9.7,
+   "abs_url": "https://arxiv.org/abs/2611.33145"
+  },
+  {
+   "id": "2611.33612",
+   "title": "Failure Broadens, Success Sharpens: Continual Adaptation of Tool-Use Agents Across Diverse Tasks with Dual-Polarity Memory",
+   "topic": "大模型与推理",
+   "venue": "NeurIPS 2026",
+   "score": 9.7,
+   "abs_url": "https://arxiv.org/abs/2611.33612"
+  },
+  {
+   "id": "2611.33625",
+   "title": "State Space Attention: Learning Context-Dependent Memory Retention",
+   "topic": "大模型与推理",
+   "venue": "",
+   "score": 9.65,
+   "abs_url": "https://arxiv.org/abs/2611.33625"
+  },
+  {
+   "id": "2611.31766",
+   "title": "RoMo Hands: A Large Scale Richly Organized Text to Hand Motion Dataset",
+   "topic": "理论、评测与数据",
+   "venue": "NeurIPS 2026",
+   "score": 9.524,
+   "abs_url": "https://arxiv.org/abs/2611.31766"
+  }
+ ],
+ "digest_path": "digests/2026-11-26.md",
+ "summary_mode": "manual",
+ "finalized_at": "2026-11-26T11:59:43+08:00"
+}
