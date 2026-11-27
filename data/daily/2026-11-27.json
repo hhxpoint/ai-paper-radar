@@ -1,0 +1,275 @@
+{
+ "date": "2026-11-27",
+ "status": "final",
+ "created_at": "2026-11-27T11:01:34+08:00",
+ "updated_at": "2026-11-27T11:06:55+08:00",
+ "window": {
+  "start": "2026-11-23",
+  "end": "2026-11-27"
+ },
+ "fetch": {
+  "window": {
+   "start": "2026-11-23",
+   "end": "2026-11-27"
+  },
+  "arxiv": {
+   "requests": 4,
+   "entries": 1600,
+   "errors": []
+  },
+  "hf": {
+   "entries": 100,
+   "errors": [
+    "https://hf-mirror.com/api/daily_papers: GET https://hf-mirror.com/api/daily_papers?limit=100 -> HTTP 308"
+   ]
+  }
+ },
+ "counts": {
+  "candidates": 1595,
+  "excluded_seen": 7,
+  "excluded_negative": 39,
+  "excluded_short": 0,
+  "pool": 1549
+ },
+ "topic_distribution": {
+  "大模型与推理": 531,
+  "多模态与视觉": 413,
+  "理论、评测与数据": 285,
+  "效率、系统与安全": 127,
+  "强化学习与智能体": 105,
+  "其他": 51,
+  "语音与音频": 37
+ },
+ "selected": [
+  {
+   "id": "2611.34923",
+   "title": "Mixture-of-Loops Transformer",
+   "topic": "效率、系统与安全",
+   "venue": "",
+   "score": 11.15,
+   "published": "2026-11-25",
+   "authors": [
+    "Lianghui Zhu",
+    "Shijie Wang",
+    "Xinggang Wang",
+    "Jinze Bai",
+    "Bo Wang",
+    "Xiang Bai"
+   ],
+   "abs_url": "https://arxiv.org/abs/2611.34923",
+   "pdf_url": "https://arxiv.org/pdf/2611.34923",
+   "html_url": "https://arxiv.org/html/2611.34923",
+   "code_url": "https://github.com/hustvl/MoLT",
+   "hf_url": "https://huggingface.co/papers/2611.34923",
+   "comment": "Code is available at https://github.com/hustvl/MoLT",
+   "abstract": "Looped Transformers boost expressivity by reusing shared layers across loops, yet at the cost of efficiency. Pushing their expressivity-efficiency frontier requires rethinking the core mechanism connecting adjacent loops: What should be passed as a Transformer loops? We introduce Mixture-of-Loops Transformer (MoLT), whose Mixture-of-Loops Attention (MoLA) uses keys and values (KV) as memory for selective reuse across depths and loops. Under loop residual, MoLT-R retains the residual stream and reads local KV across loops for expressivity. Under loop KV, MoLT-KV instead restarts from embeddings and reads current-loop local KV with preceding-loop memory KV at earlier positions for efficiency. MoLT-KV eliminates same-position cross-loop dependence and, paired with loop forcing for parallel training, unlocks single-traversal Mixture-of-Loops (MoL) decoding beyond the training loop horizon. To balance efficiency and quality, we introduce U-shaped MoLT (U-MoLT), which separates memory construction from prediction readout and skips unused decoder traversals without changing predictions. In 400B-token pretraining, U-MoLT outperforms OLMo3 across 700M/1.5B dense and 3B MoE models, achieving 1.7x validation cross-entropy (CE) token efficiency at 700M while improving 3B MoE 10-domain perplexity by 0.75 and 10-task accuracy by 2.1 percentage points. In 100B-token continued pretraining of Qwen3.5-0.8B-Base, our U-MoLT adaptation lowers CE on all 11 domains over the matched baseline with 1.4x mean token efficiency. At inference, U-MoLT with MoL-Hybrid-2 matches non-looped OLMo3 latency at 996.6 vs. 1,000.6 ms on S-size (~113M) models. Code is available at https://github.com/hustvl/MoLT",
+   "signals": {
+    "venue": 0.0,
+    "topic": 0.75,
+    "opinion": 6.2,
+    "hf": 2.5,
+    "freshness": 1.0,
+    "code": 0.4,
+    "abstract": 0.3
+   },
+   "note_path": "papers/2026-11/2611.34923-mixture-of-loops-transformer.md"
+  },
+  {
+   "id": "2611.34681",
+   "title": "Find the Clue, Not the Scene: Rethinking Reasoning for Entity Recognition in Vision-Language Models",
+   "topic": "大模型与推理",
+   "venue": "",
+   "score": 10.2,
+   "published": "2026-11-25",
+   "authors": [
+    "Kyungmin Min",
+    "Soyeon Kim",
+    "Junseok Kim",
+    "Kyomin Jung"
+   ],
+   "abs_url": "https://arxiv.org/abs/2611.34681",
+   "pdf_url": "https://arxiv.org/pdf/2611.34681",
+   "html_url": "https://arxiv.org/html/2611.34681",
+   "code_url": "",
+   "hf_url": "",
+   "comment": "",
+   "abstract": "Answering a knowledge-based visual question requires first recognizing the entity in the image and then recalling knowledge about it. Thinking vision-language models (VLMs) reason for thousands of tokens before answering, yet it remains underexplored how well such thinking VLMs perform each of these two steps. We therefore analyze thinking VLMs on this task and make two key observations. (1) Recognition is the bottleneck, since 76.3% of errors across four models on ViQuAE stem from misrecognizing the entity, and 84.9% of these failures are resolved once the entity name is provided in the question. (2) Recognition is driven by entity-recall clues rather than by general descriptions of the image. An entity-recall clue is a distinctive visual detail that helps the model recall the entity, such as keys, a traditional attribute of Saint Peter. Based on these findings, we propose ClueRL, a reinforcement learning approach that extends Group Relative Policy Optimization (GRPO) with an advantage localized to the entity-recall clue in the thinking trace. Rather than injecting new entity knowledge, ClueRL changes how VLMs think: it leads them to attend more closely to visual details and spot these clues, helping them use the knowledge they already have. Consequently, it outperforms both GRPO and a perception-reward baseline on three entity recognition benchmarks. Moreover, this clue-seeking behavior generalizes beyond entity recognition, the only task used for training. Since recognition is the bottleneck, the gains carry over to knowledge-based visual question answering. They even extend to general multimodal reasoning, raising Qwen3.5-4B by 4.4 and 4.0 points on the ScienceQA and MMMU subsets of MMStar, respectively.",
+   "signals": {
+    "venue": 0.0,
+    "topic": 1.0,
+    "opinion": 7.9,
+    "hf": 0.0,
+    "freshness": 1.0,
+    "code": 0.0,
+    "abstract": 0.3
+   },
+   "note_path": "papers/2026-11/2611.34681-find-the-clue-not-the-scene-rethinking-reasoning.md"
+  },
+  {
+   "id": "2611.33670",
+   "title": "Rethinking Knowledge Distillation for Diffusion Language Models",
+   "topic": "效率、系统与安全",
+   "venue": "",
+   "score": 9.95,
+   "published": "2026-11-25",
+   "authors": [
+    "Yuxuan Sun",
+    "Yuanjian Xu",
+    "Jianing Hao",
+    "Yu Li",
+    "Sowmen Das",
+    "Zhong Li",
+    "Sangwoong Yoon",
+    "Miguel R. D. Rodrigues"
+   ],
+   "abs_url": "https://arxiv.org/abs/2611.33670",
+   "pdf_url": "https://arxiv.org/pdf/2611.33670",
+   "html_url": "https://arxiv.org/html/2611.33670",
+   "code_url": "",
+   "hf_url": "",
+   "comment": "",
+   "abstract": "Knowledge distillation has recently proven highly effective for improving autoregressive models, but its applicability to DLMs remains poorly understood. We present the first systematic study of KD for DLMs and uncover two non-intuitive failures of classical forward-KL (FKL) distillation: (i) student perplexity does not improve monotonically with more teacher-generated data, and (ii) on the same teacher-generated corpus, FKL distillation underperforms simply training the student with the original DLM denoising objective. To address them, we propose a unified, data-free distillation framework for masked DLMs. First, the framework runs an off-policy distillation phase that absorbs general knowledge from a static set of teacher-generated data. Then, the framework employs on-policy distillation which consists of three techniques: a trajectory loss along the student's own reverse process, confidence reweighting that down-weights tokens where the teacher is unsure, and a trust-region anchor that stabilizes the moving target. On MDLM, the resulting student attains a GPT-2 perplexity of $24.75$, surpassing the teacher's $27.04$; on Dream-7B distillation to a 93M student model, the framework reduces Qwen-2.5 perplexity from the FKL-distilled baseline of $25.23$ to $19.83$ while preserving performance on zero-shot general capability benchmarks.",
+   "signals": {
+    "venue": 0.0,
+    "topic": 0.75,
+    "opinion": 7.9,
+    "hf": 0.0,
+    "freshness": 1.0,
+    "code": 0.0,
+    "abstract": 0.3
+   },
+   "note_path": "papers/2026-11/2611.33670-rethinking-knowledge-distillation-for-diffusion.md"
+  },
+  {
+   "id": "2611.34848",
+   "title": "Put the World Back: Timestamps Matter in Time Series Reasoning",
+   "topic": "大模型与推理",
+   "venue": "NeurIPS 2026 Workshop (FMs for Temporal Systems)",
+   "score": 9.85,
+   "published": "2026-11-25",
+   "authors": [
+    "Tingrui Huang",
+    "Yuanyuan Deng",
+    "Qingren Yao",
+    "Joaquin Vanschoren",
+    "Mykola Pechenizkiy",
+    "Songgaojun Deng"
+   ],
+   "abs_url": "https://arxiv.org/abs/2611.34848",
+   "pdf_url": "https://arxiv.org/pdf/2611.34848",
+   "html_url": "https://arxiv.org/html/2611.34848",
+   "code_url": "https://github.com/tingrui-huang/timestamps-matter",
+   "hf_url": "",
+   "comment": "Accepted at the NeurIPS 2026 Workshop on Foundation Models for Temporal Systems. 34 pages. Equal contribution: Tingrui Huang and Yuanyuan Deng",
+   "abstract": "Large language models (LLMs) are increasingly applied to time series reasoning. However, current evaluations often give models events in chronological order and already matched to the time series. This makes it unclear whether models use timestamps to connect events with observations or simply take shortcuts. To expose this ambiguity, we reformulate time series reasoning from a world-to-series projection perspective, viewing timestamps as explicit indices that connect numerical observations and external events to shared world states. We identify three structures that timestamps can make explicit: temporal causal structure, time semantics, and event-series alignment. Building on this perspective, we develop a diagnostic protocol that distinguishes timestamp-grounded reasoning from correlational shortcuts, a distinction that accuracy-based benchmarks cannot make. Controlled interventions on 310 questions from two tasks show that high accuracy can persist when timestamps are replaced by relative offsets or removed, while breaking event-series alignment induces systematic failures. When context is pre-aligned, models barely need timestamps. When order is missing, they use dates to recall world knowledge. Without dates, they rely on correlational shortcuts and rarely notice incorrect timestamps. These findings show that high accuracy on pre-aligned, ordered inputs does not establish that a model uses timestamps to synchronize observations with the world. We release our code, model outputs, and trajectory labels at https://github.com/tingrui-huang/timestamps-matter.",
+   "signals": {
+    "venue": 4.0,
+    "topic": 1.25,
+    "opinion": 2.9,
+    "hf": 0.0,
+    "freshness": 1.0,
+    "code": 0.4,
+    "abstract": 0.3
+   },
+   "note_path": "papers/2026-11/2611.34848-put-the-world-back-timestamps-matter-in-time.md"
+  },
+  {
+   "id": "2611.34857",
+   "title": "An offset--drift Kalman filter for continuous emotion recognition and annotation from sparse human reviews",
+   "topic": "语音与音频",
+   "venue": "arXiv 预印本（拟投 INTERSPEECH 2027）",
+   "score": 6.45,
+   "published": "2026-11-25",
+   "authors": [
+    "Jie Dong",
+    "Mahdi Zareei"
+   ],
+   "abs_url": "https://arxiv.org/abs/2611.34857",
+   "pdf_url": "https://arxiv.org/pdf/2611.34857",
+   "html_url": "https://arxiv.org/html/2611.34857",
+   "code_url": "",
+   "hf_url": "",
+   "comment": "The manuscript is 6 pages long and includes 1 figure and 2 tables. It is planned for submission to INTERSPEECH 2027",
+   "abstract": "Continuous emotion recognition tracks how emotion changes over time, but its predictions often deviate from human ratings, and the traces it is trained on are rated in real time by several annotators, which is slow and costly. A few human reviews could help with both, but rejection only decides which predictions to hand over and adaptation adjusts the model or its outputs; neither uses reviews to correct unreviewed windows directly. We propose a Kalman-filter correction that models the predictor's error as a per-part offset plus a slow drift, estimates it from the reviewed windows and corrects every unreviewed window online, leaving the predictor unchanged. On MSP-Conversation, it beats four simpler corrections in all 48 paired comparisons, keeps correcting each part after reviewing stops and, for uncorrected predictions, tells a person which windows to take over. The same correction serves annotation: with 20% of windows reviewed, the completed trace comes closer to the raters.",
+   "signals": {
+    "venue": 4.0,
+    "topic": 0.5,
+    "opinion": 0.65,
+    "hf": 0.0,
+    "freshness": 1.0,
+    "code": 0.0,
+    "abstract": 0.3
+   },
+   "note_path": "papers/2026-11/2611.34857-an-offset-drift-kalman-filter-for-continuous.md"
+  }
+ ],
+ "backups": [
+  {
+   "id": "2611.31582",
+   "title": "LatentLens: Rethinking Latent Interface in Multi-Agent Systems",
+   "topic": "大模型与推理",
+   "venue": "",
+   "score": 9.7,
+   "abs_url": "https://arxiv.org/abs/2611.31582"
+  },
+  {
+   "id": "2611.32801",
+   "title": "Scaling Laws of Ensemble Uncertainty in Language Models",
+   "topic": "大模型与推理",
+   "venue": "",
+   "score": 9.7,
+   "abs_url": "https://arxiv.org/abs/2611.32801"
+  },
+  {
+   "id": "2611.33612",
+   "title": "Failure Broadens, Success Sharpens: Continual Adaptation of Tool-Use Agents Across Diverse Tasks with Dual-Polarity Memory",
+   "topic": "大模型与推理",
+   "venue": "NeurIPS 2026",
+   "score": 9.7,
+   "abs_url": "https://arxiv.org/abs/2611.33612"
+  },
+  {
+   "id": "2611.33625",
+   "title": "State Space Attention: Learning Context-Dependent Memory Retention",
+   "topic": "大模型与推理",
+   "venue": "",
+   "score": 9.65,
+   "abs_url": "https://arxiv.org/abs/2611.33625"
+  },
+  {
+   "id": "2611.33036",
+   "title": "Towards Realistic Evaluation of Uncertainty Quantification for LLM-Based Recommender Systems",
+   "topic": "理论、评测与数据",
+   "venue": "TMLR 2026",
+   "score": 9.45,
+   "abs_url": "https://arxiv.org/abs/2611.33036"
+  },
+  {
+   "id": "2611.34132",
+   "title": "Agent-as-a-Verifier: From Scores to Evidence for General Verification",
+   "topic": "大模型与推理",
+   "venue": "NeurIPS 2026",
+   "score": 9.4,
+   "abs_url": "https://arxiv.org/abs/2611.34132"
+  },
+  {
+   "id": "2611.33850",
+   "title": "Mitigating Overgeneralization in RND via Spectral Target Design",
+   "topic": "理论、评测与数据",
+   "venue": "NeurIPS 2026",
+   "score": 9.35,
+   "abs_url": "https://arxiv.org/abs/2611.33850"
+  },
+  {
+   "id": "2611.32297",
+   "title": "MaskedVGGT: Masked Multi-View Transformers Are Scalable 3D Learners",
+   "topic": "多模态与视觉",
+   "venue": "",
+   "score": 9.2,
+   "abs_url": "https://arxiv.org/abs/2611.32297"
+  }
+ ],
+ "digest_path": "digests/2026-11-27.md",
+ "summary_mode": "manual",
+ "finalized_at": "2026-11-27T11:06:55+08:00"
+}

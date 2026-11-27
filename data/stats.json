@@ -1,15 +1,15 @@
 {
- "updated_at": "2026-11-26T11:59:43+08:00",
- "papers_total": 20,
- "digests_total": 4,
+ "updated_at": "2026-11-27T11:09:03+08:00",
+ "papers_total": 25,
+ "digests_total": 5,
  "empty_days": 0,
  "by_topic": {
-  "大模型与推理": 8,
-  "语音与音频": 4,
+  "大模型与推理": 10,
+  "语音与音频": 5,
   "理论、评测与数据": 3,
+  "效率、系统与安全": 3,
   "强化学习与智能体": 2,
-  "多模态与视觉": 2,
-  "效率、系统与安全": 1
+  "多模态与视觉": 2
  },
  "by_venue": {
   "NeurIPS 2026": 3,
@@ -17,10 +17,12 @@
   "NeurIPS 2026 Workshop (GenAI4Health)": 1,
   "NeurIPS 2026 Workshop (LCFM)": 1,
   "EMNLP 2026": 1,
-  "ICASSP": 1
+  "ICASSP": 1,
+  "NeurIPS 2026 Workshop (FMs for Temporal Systems)": 1,
+  "arXiv 预印本（拟投 INTERSPEECH 2027）": 1
  },
  "by_month": {
-  "2026-11": 20
+  "2026-11": 25
  },
- "last_digest": "2026-11-26"
+ "last_digest": "2026-11-27"
 }

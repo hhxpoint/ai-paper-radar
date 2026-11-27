@@ -160,6 +160,46 @@
     "语音与音频"
    ],
    "venue": "ICASSP"
+  },
+  "2611.34923": {
+   "date": "2026-11-27",
+   "title": "Mixture-of-Loops Transformer",
+   "topics": [
+    "效率、系统与安全"
+   ],
+   "venue": ""
+  },
+  "2611.34681": {
+   "date": "2026-11-27",
+   "title": "Find the Clue, Not the Scene: Rethinking Reasoning for Entity Recognition in Vision-Language Models",
+   "topics": [
+    "大模型与推理"
+   ],
+   "venue": ""
+  },
+  "2611.33670": {
+   "date": "2026-11-27",
+   "title": "Rethinking Knowledge Distillation for Diffusion Language Models",
+   "topics": [
+    "效率、系统与安全"
+   ],
+   "venue": ""
+  },
+  "2611.34848": {
+   "date": "2026-11-27",
+   "title": "Put the World Back: Timestamps Matter in Time Series Reasoning",
+   "topics": [
+    "大模型与推理"
+   ],
+   "venue": "NeurIPS 2026"
+  },
+  "2611.34857": {
+   "date": "2026-11-27",
+   "title": "An offset--drift Kalman filter for continuous emotion recognition and annotation from sparse human reviews",
+   "topics": [
+    "语音与音频"
+   ],
+   "venue": "Interspeech 2027"
   }
  },
  "titles": {
@@ -182,7 +222,12 @@
   "localizing cross lingual generalization in parameter space": "2611.31975",
   "effect driven skill abstractions for offline reinforcement learning": "2611.33229",
   "rethinking reasoning effort training in large language models on policy distillation or reinforcement learning": "2611.32131",
-  "perfect scores misplaced explanations a controlled study of explainability in audio deepfake detection": "2611.32593"
+  "perfect scores misplaced explanations a controlled study of explainability in audio deepfake detection": "2611.32593",
+  "mixture of loops transformer": "2611.34923",
+  "find the clue not the scene rethinking reasoning for entity recognition in vision language models": "2611.34681",
+  "rethinking knowledge distillation for diffusion language models": "2611.33670",
+  "put the world back timestamps matter in time series reasoning": "2611.34848",
+  "an offset drift kalman filter for continuous emotion recognition and annotation from sparse human reviews": "2611.34857"
  },
- "updated_at": "2026-11-26T11:59:43+08:00"
+ "updated_at": "2026-11-27T11:06:55+08:00"
 }
