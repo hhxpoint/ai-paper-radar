@@ -200,6 +200,46 @@
     "语音与音频"
    ],
    "venue": "Interspeech 2027"
+  },
+  "2611.32801": {
+   "date": "2026-11-28",
+   "title": "Scaling Laws of Ensemble Uncertainty in Language Models",
+   "topics": [
+    "大模型与推理"
+   ],
+   "venue": ""
+  },
+  "2611.33036": {
+   "date": "2026-11-28",
+   "title": "Towards Realistic Evaluation of Uncertainty Quantification for LLM-Based Recommender Systems",
+   "topics": [
+    "理论、评测与数据"
+   ],
+   "venue": "TMLR 2026"
+  },
+  "2611.34232": {
+   "date": "2026-11-28",
+   "title": "OS-Omni: Benchmarking Generalist Computer-Using Agents on Long-Horizon Workflows Across Platforms",
+   "topics": [
+    "大模型与推理"
+   ],
+   "venue": "NeurIPS 2026"
+  },
+  "2611.32297": {
+   "date": "2026-11-28",
+   "title": "MaskedVGGT: Masked Multi-View Transformers Are Scalable 3D Learners",
+   "topics": [
+    "多模态与视觉"
+   ],
+   "venue": ""
+  },
+  "2611.32286": {
+   "date": "2026-11-28",
+   "title": "Reproducing the Speech Labels of Qwen3-Omni's Talker: Mimi in bf16, and a Last-Frame Pitfall",
+   "topics": [
+    "语音与音频"
+   ],
+   "venue": ""
   }
  },
  "titles": {
@@ -227,7 +267,12 @@
   "find the clue not the scene rethinking reasoning for entity recognition in vision language models": "2611.34681",
   "rethinking knowledge distillation for diffusion language models": "2611.33670",
   "put the world back timestamps matter in time series reasoning": "2611.34848",
-  "an offset drift kalman filter for continuous emotion recognition and annotation from sparse human reviews": "2611.34857"
+  "an offset drift kalman filter for continuous emotion recognition and annotation from sparse human reviews": "2611.34857",
+  "scaling laws of ensemble uncertainty in language models": "2611.32801",
+  "towards realistic evaluation of uncertainty quantification for llm based recommender systems": "2611.33036",
+  "os omni benchmarking generalist computer using agents on long horizon workflows across platforms": "2611.34232",
+  "maskedvggt masked multi view transformers are scalable 3d learners": "2611.32297",
+  "reproducing the speech labels of qwen3 omni s talker mimi in bf16 and a last frame pitfall": "2611.32286"
  },
- "updated_at": "2026-11-27T11:06:55+08:00"
+ "updated_at": "2026-11-28T10:43:54+08:00"
 }

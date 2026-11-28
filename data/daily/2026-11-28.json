@@ -1,0 +1,277 @@
+{
+ "date": "2026-11-28",
+ "status": "final",
+ "created_at": "2026-11-28T10:38:25+08:00",
+ "updated_at": "2026-11-28T10:43:54+08:00",
+ "window": {
+  "start": "2026-11-24",
+  "end": "2026-11-28"
+ },
+ "fetch": {
+  "window": {
+   "start": "2026-11-24",
+   "end": "2026-11-28"
+  },
+  "arxiv": {
+   "requests": 4,
+   "entries": 1436,
+   "errors": []
+  },
+  "hf": {
+   "entries": 100,
+   "errors": []
+  }
+ },
+ "counts": {
+  "candidates": 1439,
+  "excluded_seen": 11,
+  "excluded_negative": 39,
+  "excluded_short": 0,
+  "pool": 1389
+ },
+ "topic_distribution": {
+  "大模型与推理": 465,
+  "多模态与视觉": 371,
+  "理论、评测与数据": 264,
+  "效率、系统与安全": 114,
+  "强化学习与智能体": 97,
+  "其他": 45,
+  "语音与音频": 33
+ },
+ "selected": [
+  {
+   "id": "2611.32801",
+   "title": "Scaling Laws of Ensemble Uncertainty in Language Models",
+   "topic": "大模型与推理",
+   "venue": "",
+   "score": 9.7,
+   "published": "2026-11-24",
+   "authors": [
+    "Siamak Ravanbakhsh",
+    "David Nitchi",
+    "Khang Ngo"
+   ],
+   "abs_url": "https://arxiv.org/abs/2611.32801",
+   "pdf_url": "https://arxiv.org/pdf/2611.32801",
+   "html_url": "https://arxiv.org/html/2611.32801",
+   "code_url": "",
+   "hf_url": "",
+   "comment": "",
+   "abstract": "Many use cases for large language models (LLMs)---from AI safety to exploration and human interaction---can benefit from epistemic uncertainty estimates. We argue that existing Bayesian Deep Learning solutions, which are often restricted to a fixed model family, fail to capture the full epistemic uncertainty at practical LLM scales. This is because the error due to the bounded capacity of the model family remains invisible to disagreement among models supported by the prior. We relate this error to the well-known power-law scaling of LLM loss with model size. We then show that a second power law quantifies the shrinking disagreement within ensembles as model size increases. Its slower decay relative to the capacity law above suggests that ensembles capture a growing share of epistemic uncertainty and become more competitive as an axis for scaling, compared to a single larger model. Finally, a third power law quantifies the loss of ensemble diversity as members share a larger fraction of training before branching, and therefore identifies a further limitation, beyond the capacity error, for LoRA ensembles and optimization-based or second-order methods that approximate uncertainty around a single training solution. At a high level, these findings suggest diverse ensembles can be a promising axis, both for scaling and uncertainty quantification at larger scales.",
+   "signals": {
+    "venue": 0.0,
+    "topic": 1.5,
+    "opinion": 7.4,
+    "hf": 0.0,
+    "freshness": 0.5,
+    "code": 0.0,
+    "abstract": 0.3
+   },
+   "note_path": "papers/2026-11/2611.32801-scaling-laws-of-ensemble-uncertainty-in-language.md"
+  },
+  {
+   "id": "2611.33036",
+   "title": "Towards Realistic Evaluation of Uncertainty Quantification for LLM-Based Recommender Systems",
+   "topic": "理论、评测与数据",
+   "venue": "TMLR 2026",
+   "score": 9.45,
+   "published": "2026-11-24",
+   "authors": [
+    "Hao Wu",
+    "Sipeng Chen",
+    "Weikai Li",
+    "Tianyi Chen",
+    "Qiancheng Yang",
+    "Hang Zhou",
+    "Yizhou Sun",
+    "Wei Wang",
+    "Xiao Luo"
+   ],
+   "abs_url": "https://arxiv.org/abs/2611.33036",
+   "pdf_url": "https://arxiv.org/pdf/2611.33036",
+   "html_url": "https://arxiv.org/html/2611.33036",
+   "code_url": "",
+   "hf_url": "",
+   "comment": "27 pages, 5 figures. Published in Transactions on Machine Learning Research (TMLR), 11/2026. Reviewed on OpenReview: https://openreview.net/forum?id=GXDe6REdu3",
+   "abstract": "Large language models (LLMs) provide a flexible interface for recommendation systems. However, their issued rankings require reliable instance-level uncertainty monitoring. In this scenario, comparing uncertainty quantification (UQ) methods becomes challenging because LLM rankers lack a standard item-classification head. Their scores may depend on option labels, prompts, generation procedures, and the available user and item evidence. Existing methods derive uncertainty from different sources and apply it at different stages of the recommendation process. Some methods evaluate an issued ranking, whereas others use uncertainty to change the ranking itself, making direct comparison difficult. Here we introduce a fixed-ranking benchmark which evaluates eight heterogeneous UQ signals as record-level monitors under a shared output contract. We evaluate these signals across four recommendation datasets and two LLM backbones under a shared fixed-ranking protocol. From the results, we draw three main observations. First, UQ method ordering changes across backbones even on the same reference instances. Second, ranking-aligned Top10Mass provides the strongest scalar Error@10 detection in several evaluation conditions, reflecting effective cutoff-aligned monitoring, while its advantage narrows for popularity-tail targets. Third, scalar UQ signals are weak at identifying which control has the larger clipped NDCG@10 difference, whereas source-specific signals, including Perturbation Rank Instability and simple listwise distances, provide stronger paired-control agreement, reflecting their sensitivity to the two controlled evidence sources. These findings motivate us to evaluate ranking-failure detection, robustness across recommendation conditions, and responses to controlled evidence changes as distinct properties of UQ.",
+   "signals": {
+    "venue": 4.0,
+    "topic": 1.25,
+    "opinion": 3.4,
+    "hf": 0.0,
+    "freshness": 0.5,
+    "code": 0.0,
+    "abstract": 0.3
+   },
+   "note_path": "papers/2026-11/2611.33036-towards-realistic-evaluation-of-uncertainty.md"
+  },
+  {
+   "id": "2611.34232",
+   "title": "OS-Omni: Benchmarking Generalist Computer-Using Agents on Long-Horizon Workflows Across Platforms",
+   "topic": "大模型与推理",
+   "venue": "NeurIPS 2026",
+   "score": 9.35,
+   "published": "2026-11-25",
+   "authors": [
+    "Hui Shen",
+    "Yunta Hsieh",
+    "Jianing Ma",
+    "Zhuoran Yin",
+    "Zhuhan Bao",
+    "Ziyuan Liu",
+    "Qi Han",
+    "Xiuqi Xu",
+    "Xianbang Wang",
+    "Wenhao Chai",
+    "Sihan Xu",
+    "Chenyang Zhao"
+   ],
+   "abs_url": "https://arxiv.org/abs/2611.34232",
+   "pdf_url": "https://arxiv.org/pdf/2611.34232",
+   "html_url": "https://arxiv.org/html/2611.34232",
+   "code_url": "https://github.com/OS-Copilot/OS-Omni",
+   "hf_url": "https://huggingface.co/papers/2611.34232",
+   "comment": "NeurIPS 2026",
+   "abstract": "Computer-using agents are increasingly expected to complete realistic user goals rather than isolated GUI actions. However, existing benchmarks typically isolate web, mobile, or desktop environments, leaving it unclear whether a single generalist agent can execute long-horizon workflows that span multiple operating systems and persistent application states. We introduce OS-Omni, a live cross-platform benchmark and execution environment for evaluating computer-using agents across Windows, Ubuntu, macOS, iOS, Android, and Web environments. OS-Omni is released in versioned waves of 300 tasks each; this paper focuses on the first release, v1, which contains 48 tasks per platform and 12 cross-platform workflows that pair a desktop with an Android phone. OS-Omni provides reproducible initialization, platform-specific adapters, trajectory logging, and executable final-state evaluators, and includes controlled service-backed applications for workflows involving account, cart, budget, calendar, message, and other persistent state. Human studies show that OS-Omni tasks require 67.54 interaction steps, substantially exceeding OSWorld references of 15.0 steps. On v1, the strongest evaluated agent, Claude Opus 5.5, reaches 68.5% average success, trailing the 77.3% human reference by 8.8 points; the gap is uneven across platforms, with frontier models exceeding humans on Linux but trailing them by more than 25 points on iOS and macOS. These results indicate that current agents remain far from platform-robust, long-horizon computer use, especially when success requires sustained state tracking and durable final-state changes.",
+   "signals": {
+    "venue": 4.0,
+    "topic": 1.0,
+    "opinion": 0.65,
+    "hf": 2.5,
+    "freshness": 0.5,
+    "code": 0.4,
+    "abstract": 0.3
+   },
+   "note_path": "papers/2026-11/2611.34232-os-omni-benchmarking-generalist-computer-using.md"
+  },
+  {
+   "id": "2611.32297",
+   "title": "MaskedVGGT: Masked Multi-View Transformers Are Scalable 3D Learners",
+   "topic": "多模态与视觉",
+   "venue": "",
+   "score": 9.2,
+   "published": "2026-11-24",
+   "authors": [
+    "Zichen Zou",
+    "Xiaosong Jia",
+    "Wen-Ming Chen",
+    "Zuxuan Wu",
+    "Yu-Gang Jiang"
+   ],
+   "abs_url": "https://arxiv.org/abs/2611.32297",
+   "pdf_url": "https://arxiv.org/pdf/2611.32297",
+   "html_url": "https://arxiv.org/html/2611.32297",
+   "code_url": "",
+   "hf_url": "",
+   "comment": "The submitting author requests standard withdrawal after reconsidering the timing of public dissemination of this work",
+   "abstract": "Multi-view feed-forward models show strong scalability, but their reliance on costly geometric annotations limits data scaling. Existing 3D self-supervised approaches reduce this reliance through cross-view completion (e.g., CroCo, MuM, Muskie) or novel-view synthesis (e.g., RayZer, E-RayZer), typically learning image representations and cross-view interactions jointly. We argue that learning single image representations from scratch is unnecessary for 3D pretraining methods, as doing so fails to benefit from the continuing advances in 2D foundation models (e.g., DINO, CLIP, frontier VLMs). We introduce MaskedVGGT, which freezes a strong pretrained 2D encoder and pretrains only an added, randomly initialized multi-view transformer, focusing on learning interactions across views. MaskedVGGT pretrains the multi-view transformer through masked self-distillation without annotations: a student predicts targets at masked locations based on complete anchor views and heavily masked remaining views, while an exponential-moving-average teacher provides prediction targets based on unmasked inputs. In experiments across model sizes up to 1B parameters, MaskedVGGT pretraining followed by fine-tuning outperforms single-stage supervised VGGT-$Ω$ training with the same training data, model architecture, and total number of optimization updates. MaskedVGGT also outperforms E-RayZer, CroCo, MuM, and Muskie, providing evidence for the effectiveness of building multi-view pretraining on strong 2D representations. Finally, extending pretraining with additional unlabeled videos further improves generalization, and the learned representations transfer to diverse downstream tasks. These results demonstrate an effective division of learning: reuse strong image representations from 2D pretraining and learn cross-view interactions from unlabeled multi-view data without relying on geometric annotations.",
+   "signals": {
+    "venue": 0.0,
+    "topic": 1.0,
+    "opinion": 7.4,
+    "hf": 0.0,
+    "freshness": 0.5,
+    "code": 0.0,
+    "abstract": 0.3
+   },
+   "note_path": "papers/2026-11/2611.32297-maskedvggt-masked-multi-view-transformers-are.md"
+  },
+  {
+   "id": "2611.32286",
+   "title": "Reproducing the Speech Labels of Qwen3-Omni's Talker: Mimi in bf16, and a Last-Frame Pitfall",
+   "topic": "语音与音频",
+   "venue": "",
+   "score": 5.35,
+   "published": "2026-11-24",
+   "authors": [
+    "Yuxuan Chen"
+   ],
+   "abs_url": "https://arxiv.org/abs/2611.32286",
+   "pdf_url": "https://arxiv.org/pdf/2611.32286",
+   "html_url": "https://arxiv.org/html/2611.32286",
+   "code_url": "https://github.com/elpsykongloo/qwen3-omni-talker-finetune",
+   "hf_url": "",
+   "comment": "6 figures. Code: https://github.com/elpsykongloo/qwen3-omni-talker-finetune",
+   "abstract": "Qwen3-Omni speaks through a Talker predicting 16 codebooks of a 12.5 Hz audio codec, but the encoder that made its training labels was not released, so new voices cannot be trained on matching labels. We identify this encoder from the released model's behavior. White-box regression shows that the codebook embeddings of the Talker, its multi-token predictor and the Code2Wav decoder match the first 16 codebooks of kyutai's Mimi layer by layer. A decoder-based test looks convincing but fails calibration: decoders trained on known labels cannot tell them apart. Teacher-forced Talker likelihoods, calibrated with 13 code language models trained on known labels, do tell implementations apart: the Talker prefers labels from kyutai's moshi package with bf16 weights over every other variant we tried. Loudness normalization and band-limiting of 20% or more of the data are ruled out. Separately, transformers' MimiModel encodes the last frame differently from kyutai's encoder unless the input length is a multiple of 1920 samples. After LoRA fine-tuning on its labels, 44--55% of generated sentences end in a noise burst, and the same frame costs the Mimi-based CSM-1B 119 nats; padding the input removes both. We release the encoding recipe, a label checker and a Talker fine-tuning toolkit.",
+   "signals": {
+    "venue": 0.0,
+    "topic": 1.75,
+    "opinion": 2.4,
+    "hf": 0.0,
+    "freshness": 0.5,
+    "code": 0.4,
+    "abstract": 0.3
+   },
+   "note_path": "papers/2026-11/2611.32286-reproducing-the-speech-labels-of-qwen3-omni-s.md"
+  }
+ ],
+ "backups": [
+  {
+   "id": "2611.33145",
+   "title": "Lost on Campus: Evaluating Embodied Spatial Reasoning of Vision-Language Models in the Wild",
+   "topic": "大模型与推理",
+   "venue": "NeurIPS 2026",
+   "score": 9.2,
+   "abs_url": "https://arxiv.org/abs/2611.33145"
+  },
+  {
+   "id": "2611.33612",
+   "title": "Failure Broadens, Success Sharpens: Continual Adaptation of Tool-Use Agents Across Diverse Tasks with Dual-Polarity Memory",
+   "topic": "大模型与推理",
+   "venue": "NeurIPS 2026",
+   "score": 9.2,
+   "abs_url": "https://arxiv.org/abs/2611.33612"
+  },
+  {
+   "id": "2611.33625",
+   "title": "State Space Attention: Learning Context-Dependent Memory Retention",
+   "topic": "大模型与推理",
+   "venue": "",
+   "score": 9.15,
+   "abs_url": "https://arxiv.org/abs/2611.33625"
+  },
+  {
+   "id": "2611.32945",
+   "title": "PHM-ensemble: Scalable and Stable Probabilistic Multiresolution Clustering via Ensemble Density Estimation",
+   "topic": "理论、评测与数据",
+   "venue": "",
+   "score": 9.0,
+   "abs_url": "https://arxiv.org/abs/2611.32945"
+  },
+  {
+   "id": "2611.32780",
+   "title": "C3H: Compression-to-Consensus Criteria Hijacking in Multimodal LLM Recommender Systems",
+   "topic": "大模型与推理",
+   "venue": "NeurIPS 2026",
+   "score": 8.95,
+   "abs_url": "https://arxiv.org/abs/2611.32780"
+  },
+  {
+   "id": "2611.34132",
+   "title": "Agent-as-a-Verifier: From Scores to Evidence for General Verification",
+   "topic": "大模型与推理",
+   "venue": "NeurIPS 2026",
+   "score": 8.9,
+   "abs_url": "https://arxiv.org/abs/2611.34132"
+  },
+  {
+   "id": "2611.32002",
+   "title": "Change the Base, Change the Game: Rethinking Pan-sharpening",
+   "topic": "理论、评测与数据",
+   "venue": "",
+   "score": 8.889,
+   "abs_url": "https://arxiv.org/abs/2611.32002"
+  },
+  {
+   "id": "2611.33850",
+   "title": "Mitigating Overgeneralization in RND via Spectral Target Design",
+   "topic": "理论、评测与数据",
+   "venue": "NeurIPS 2026",
+   "score": 8.85,
+   "abs_url": "https://arxiv.org/abs/2611.33850"
+  }
+ ],
+ "digest_path": "digests/2026-11-28.md",
+ "summary_mode": "manual",
+ "finalized_at": "2026-11-28T10:43:54+08:00"
+}

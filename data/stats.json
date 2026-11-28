@@ -1,19 +1,19 @@
 {
- "updated_at": "2026-11-27T11:09:03+08:00",
- "papers_total": 25,
- "digests_total": 5,
+ "updated_at": "2026-11-28T10:43:55+08:00",
+ "papers_total": 30,
+ "digests_total": 6,
  "empty_days": 0,
  "by_topic": {
-  "大模型与推理": 10,
-  "语音与音频": 5,
-  "理论、评测与数据": 3,
+  "大模型与推理": 12,
+  "语音与音频": 6,
+  "理论、评测与数据": 4,
   "效率、系统与安全": 3,
-  "强化学习与智能体": 2,
-  "多模态与视觉": 2
+  "多模态与视觉": 3,
+  "强化学习与智能体": 2
  },
  "by_venue": {
-  "NeurIPS 2026": 3,
-  "TMLR 2026": 1,
+  "NeurIPS 2026": 4,
+  "TMLR 2026": 2,
   "NeurIPS 2026 Workshop (GenAI4Health)": 1,
   "NeurIPS 2026 Workshop (LCFM)": 1,
   "EMNLP 2026": 1,
@@ -22,7 +22,7 @@
   "arXiv 预印本（拟投 INTERSPEECH 2027）": 1
  },
  "by_month": {
-  "2026-11": 25
+  "2026-11": 30
  },
- "last_digest": "2026-11-27"
+ "last_digest": "2026-11-28"
 }
